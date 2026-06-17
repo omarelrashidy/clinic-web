@@ -1,0 +1,1516 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="lang-ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عيادة د. أحمد سالم</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --pr:#0D5C52;--pr-d:#094840;--pr-m:#1a7a6e;--pr-l:#e8f5f3;--pr-ll:#f0faf9;
+  --sec:#76BA99;--sec-l:#d4eddf;--ter:#F4F9F8;
+  --neu:#4A5568;--bg:#F4F9F8;--wh:#fff;
+  --bd:#e2e8f0;--bd-m:#cbd5e0;
+  --tx:#1a202c;--tx-m:#4A5568;--tx-mu:#718096;
+  --err:#e53e3e;--err-l:#fff5f5;--err-b:#feb2b2;
+  --ok:#38a169;--ok-l:#f0fff4;
+  --warn:#d69e2e;--warn-l:#fffff0;
+  --or:#dd6b20;--or-l:#fff3eb;
+  --fh:'Manrope',sans-serif;--fb:'Plus Jakarta Sans',sans-serif;
+  --r:12px;--rl:18px;
+  --sh:0 4px 16px rgba(13,92,82,.1);--sh-sm:0 1px 3px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--tx);direction:rtl}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:var(--wh);border-bottom:1px solid var(--bd);
+  height:62px;padding:0 32px;display:flex;align-items:center;justify-content:space-between;
+  box-shadow:var(--sh-sm)}
+.nl{display:flex;align-items:center;gap:8px;font-family:var(--fh);font-weight:800;font-size:16px;color:var(--pr);cursor:pointer;text-decoration:none}
+.nl .li{width:36px;height:36px;background:var(--pr);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px}
+.nt{display:flex;gap:2px}
+.nt a{padding:7px 13px;border-radius:8px;font-size:13px;font-weight:500;color:var(--tx-m);cursor:pointer;transition:all .2s;text-decoration:none}
+.nt a:hover{background:var(--pr-ll);color:var(--pr)}
+.nt a.ac{background:var(--pr);color:#fff}
+.nt a.si{font-size:14px;color:var(--tx-mu)}
+.nc{background:var(--pr);color:#fff;border:none;border-radius:9px;padding:9px 18px;
+  font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.nc:hover{background:var(--pr-d)}
+
+/* PAGES */
+.pg{display:none}.pg.ac{display:block}
+
+/* ===== HOME ===== */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  max-width:1080px;margin:0 auto;padding:52px 40px 36px}
+.hb{display:inline-flex;align-items:center;gap:6px;background:var(--pr-l);color:var(--pr);
+  padding:5px 13px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:16px}
+.hb .dot{width:7px;height:7px;background:var(--sec);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-family:var(--fh);font-size:40px;font-weight:800;line-height:1.2;margin-bottom:16px}
+.hero p{font-size:15px;color:var(--tx-mu);line-height:1.8;margin-bottom:24px}
+.hbtns{display:flex;gap:10px;flex-wrap:wrap}
+.btn1{background:var(--pr);color:#fff;border:none;border-radius:var(--r);padding:12px 22px;
+  font-family:var(--fb);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:7px}
+.btn1:hover{background:var(--pr-d);transform:translateY(-1px)}
+.btn2{background:transparent;color:var(--pr);border:2px solid var(--pr);border-radius:var(--r);padding:10px 20px;
+  font-family:var(--fb);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:7px}
+.btn2:hover{background:var(--pr-ll)}
+.himg{border-radius:var(--rl);background:linear-gradient(135deg,var(--pr-l),var(--sec-l));
+  height:340px;display:flex;align-items:center;justify-content:center;position:relative}
+.himg i{font-size:110px;color:var(--pr);opacity:.25}
+.hr{position:absolute;bottom:16px;left:16px;background:#fff;border-radius:12px;padding:9px 14px;
+  display:flex;align-items:center;gap:8px;box-shadow:var(--sh)}
+.hr .st{color:#f6c90e;font-size:13px}.hr .rv{font-weight:800;font-size:15px;color:var(--pr)}
+.hr .rl{font-size:11px;color:var(--tx-mu)}
+
+.inf{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1080px;margin:0 auto;padding:0 40px 36px}
+.ic{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rl);padding:18px;display:flex;gap:12px;align-items:flex-start}
+.ico{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.ig{background:var(--pr-l);color:var(--pr)}.isa{background:var(--sec-l);color:#2d7d52}
+.ine{background:#edf2f7;color:var(--neu)}.iw{background:var(--warn-l);color:var(--warn)}
+.ic-lbl{font-size:11px;color:var(--tx-mu);margin-bottom:2px}
+.ic-val{font-size:14px;font-weight:700;color:var(--tx)}.ic-sub{font-size:11px;color:var(--tx-mu);margin-top:2px}
+.cs{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:600;margin-top:5px}
+.co{background:#f0fff4;color:#2f855a}.cc{background:#fff5f5;color:#c53030}
+.sd{width:6px;height:6px;border-radius:50%}
+.sdg{background:#48bb78;animation:pulse 1.5s infinite}.sdr{background:#fc8181}
+
+.svc-sec{max-width:1080px;margin:0 auto;padding:0 40px 52px}
+.sh2{text-align:center;margin-bottom:32px}
+.sh2 h2{font-family:var(--fh);font-size:28px;font-weight:800;margin-bottom:8px}
+.sh2 p{color:var(--tx-mu);font-size:14px}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sc{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rl);padding:24px;transition:all .25s;cursor:pointer}
+.sc:hover{border-color:var(--pr);box-shadow:var(--sh);transform:translateY(-2px)}
+.sc i{font-size:32px;color:var(--pr);margin-bottom:12px;display:block}
+.sc .sn{font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:6px}
+.sc .sd2{font-size:13px;color:var(--tx-mu);line-height:1.6;margin-bottom:14px}
+.sc .sf{display:flex;justify-content:space-between;align-items:center}
+.sp{font-weight:700;color:var(--pr);font-size:14px}
+.sb3{background:var(--pr-l);color:var(--pr);border:none;border-radius:8px;padding:6px 13px;
+  font-family:var(--fb);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.sb3:hover{background:var(--pr);color:#fff}
+
+.stats{background:var(--pr);color:#fff;display:grid;grid-template-columns:repeat(4,1fr);padding:36px 80px;gap:20px}
+.sti{text-align:center}.stv{font-family:var(--fh);font-size:32px;font-weight:800;margin-bottom:3px}
+.stl{font-size:13px;opacity:.8}
+
+/* ===== SCHEDULE ===== */
+.sch-wrap{max-width:1000px;margin:0 auto;padding:36px 32px}
+.sch-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.sch-top h2{font-family:var(--fh);font-size:24px;font-weight:800}
+.wn{display:flex;align-items:center;gap:8px}
+.wnb{width:34px;height:34px;border-radius:8px;border:1px solid var(--bd);background:#fff;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--tx-m);transition:all .2s}
+.wnb:hover{border-color:var(--pr);color:var(--pr)}
+.wnt{font-size:13px;font-weight:600;color:var(--tx-m)}
+.leg{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--bd);
+  border-radius:10px;padding:10px 16px;margin-bottom:18px;flex-wrap:wrap}
+.li2{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--tx-m)}
+.ld{width:9px;height:9px;border-radius:50%}
+.ldg{background:#48bb78}.ldy{background:#f6c90e}.ldr{background:#fc8181}
+.dc{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.dy{background:#fff;border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden}
+.dy.tod{border-color:var(--pr)}
+.dyh{padding:10px;text-align:center;border-bottom:1px solid var(--bd)}
+.dyh.th{background:var(--pr)}
+.dyn{font-size:11px;font-weight:600;color:var(--tx-mu);margin-bottom:2px}
+.dyh.th .dyn{color:rgba(255,255,255,.75)}
+.dyd{font-family:var(--fh);font-size:20px;font-weight:800;color:var(--tx)}
+.dyh.th .dyd{color:#fff}
+.dys{padding:7px;display:flex;flex-direction:column;gap:5px}
+.ds{border-radius:7px;padding:7px 9px;font-size:11px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:all .2s}
+.ds.av{background:#f0fff4;border:1px solid #9ae6b4;color:#276749}
+.ds.av:hover{background:#276749;color:#fff}
+.ds.fw{background:#fffff0;border:1px solid #faf089;color:#7b6313}
+.ds.tk{background:#fff5f5;border:1px solid #feb2b2;color:#c53030;cursor:not-allowed}
+.dst{font-weight:700}.dss{font-size:10px}
+
+/* ===== BOOKING (STEPPER) ===== */
+.bk-wrap{max-width:960px;margin:0 auto;padding:36px 32px}
+.bk-hd{margin-bottom:28px}
+.bk-hd h2{font-family:var(--fh);font-size:28px;font-weight:800;margin-bottom:6px}
+.bk-hd p{color:var(--tx-mu);font-size:14px}
+.bl{display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:start}
+.smb{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rl);padding:22px;position:sticky;top:72px}
+.smt{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:7px}
+.smr{padding:9px 0;border-bottom:1px solid var(--bd);display:flex;flex-direction:column;gap:2px}
+.smr:last-of-type{border-bottom:none}
+.sml{font-size:11px;color:var(--tx-mu)}.smv{font-size:13px;font-weight:600}
+.smt2{display:flex;justify-content:space-between;align-items:center;padding-top:14px;margin-top:6px;border-top:2px solid var(--pr)}
+.smt2 .la{font-weight:700;font-size:14px}.smt2 .am{font-family:var(--fh);font-size:20px;font-weight:800;color:var(--pr)}
+.stpb{display:flex;align-items:center;margin-bottom:28px}
+.stp{display:flex;flex-direction:column;align-items:center;flex:1;position:relative}
+.stp:not(:last-child)::after{content:'';position:absolute;top:17px;left:50%;width:100%;height:2px;background:var(--bd);z-index:0}
+.stp.dn::after,.stp.ac::after{background:var(--pr)}
+.spn{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;z-index:1;background:var(--bd);color:var(--tx-mu);transition:all .3s}
+.stp.ac .spn{background:var(--pr);color:#fff}
+.stp.dn .spn{background:var(--sec);color:#fff}
+.spl{font-size:11px;margin-top:5px;color:var(--tx-mu);font-weight:500}
+.stp.ac .spl{color:var(--pr);font-weight:600}
+.fc{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rl);padding:24px}
+.fct{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:20px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fi{display:flex;flex-direction:column;gap:5px}
+.fi label{font-size:12px;font-weight:700;color:var(--tx-m)}
+.fi input,.fi select,.fi textarea{width:100%;border:1px solid var(--bd-m);border-radius:9px;padding:10px 13px;
+  font-family:var(--fb);font-size:13px;color:var(--tx);background:#fff;outline:none;transition:all .2s}
+.fi input:focus,.fi select:focus,.fi textarea:focus{border-color:var(--pr);box-shadow:0 0 0 3px rgba(13,92,82,.08)}
+.fi.er input,.fi.er select{border-color:var(--err);box-shadow:0 0 0 3px rgba(229,62,62,.08)}
+.ferr{font-size:11px;color:var(--err);display:none;align-items:center;gap:3px;margin-top:2px}
+.fi.er .ferr{display:flex}
+.snav{display:flex;justify-content:space-between;align-items:center;margin-top:20px}
+.bnt{background:var(--pr);color:#fff;border:none;border-radius:9px;padding:11px 22px;
+  font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:7px}
+.bnt:hover{background:var(--pr-d)}
+.bbk{background:none;border:1px solid var(--bd-m);color:var(--tx-m);border-radius:9px;padding:10px 18px;
+  font-family:var(--fb);font-size:13px;cursor:pointer;transition:all .2s}
+.bbk:hover{border-color:var(--pr);color:var(--pr)}
+.svo{display:grid;gap:10px}
+.sop{border:2px solid var(--bd);border-radius:var(--r);padding:14px 16px;cursor:pointer;
+  transition:all .2s;display:flex;justify-content:space-between;align-items:center}
+.sop:hover{border-color:var(--pr);background:var(--pr-ll)}
+.sop.sl{border-color:var(--pr);background:var(--pr-l)}
+.soi{display:flex;align-items:center;gap:11px}
+.soi i{font-size:20px;color:var(--pr)}
+.son{font-weight:700;font-size:14px}
+.sod{font-size:11px;color:var(--tx-mu);margin-top:2px}
+.sopr{font-weight:800;color:var(--pr);font-size:16px}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-bottom:16px}
+.cdh{text-align:center;font-size:11px;font-weight:600;color:var(--tx-mu);padding:5px 0}
+.cd{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:7px;
+  font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;color:var(--tx-m)}
+.cd:hover:not(.di):not(.em){background:var(--pr-l);color:var(--pr)}
+.cd.sl{background:var(--pr);color:#fff}
+.cd.to{border:2px solid var(--pr);color:var(--pr)}
+.cd.di{opacity:.35;cursor:not-allowed}.cd.em{cursor:default}
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.ts{padding:9px 6px;border-radius:8px;text-align:center;font-size:12px;font-weight:600;cursor:pointer;
+  transition:all .2s;border:1.5px solid var(--bd-m);color:var(--tx-m);background:#fff}
+.ts:hover:not(.tk){border-color:var(--pr);color:var(--pr)}
+.ts.sl{background:var(--pr);color:#fff;border-color:var(--pr)}
+.ts.tk{opacity:.4;cursor:not-allowed;text-decoration:line-through;font-size:10px}
+.ts.no-slot{border-color:var(--bd);color:var(--tx-mu);font-size:11px;cursor:default;opacity:.5}
+
+/* ===== PAYMENT ===== */
+.por{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.po{border:2px solid var(--bd);border-radius:var(--r);padding:14px;cursor:pointer;
+  transition:all .2s;text-align:center;position:relative}
+.po:hover{border-color:var(--pr)}
+.po.sl{border-color:var(--pr);background:var(--pr-l)}
+.po.sl::after{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;
+  position:absolute;top:7px;left:7px;width:19px;height:19px;background:var(--pr);color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px}
+.po i{font-size:24px;color:var(--pr);margin-bottom:7px;display:block}
+.po .pol{font-size:13px;font-weight:700;margin-bottom:3px}
+.po .poa{font-size:17px;font-weight:800;color:var(--pr);margin-bottom:2px}
+.po .pod{font-size:11px;color:var(--tx-mu)}
+.hn{background:var(--warn-l);border:1px solid #faf089;border-radius:9px;padding:10px 13px;
+  font-size:12px;color:#7b6313;display:flex;align-items:center;gap:7px;margin-bottom:14px}
+.pm{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.pme{border:2px solid var(--bd);border-radius:var(--r);padding:15px;text-align:center;cursor:pointer;transition:all .2s;position:relative}
+.pme:hover{border-color:var(--pr)}
+.pme.sl{border-color:var(--pr);background:var(--pr-l)}
+.pme.sl::after{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;
+  position:absolute;top:7px;left:7px;width:19px;height:19px;background:var(--pr);color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px}
+.pme i{font-size:24px;color:var(--pr);margin-bottom:6px;display:block}
+.pme span{font-size:12px;font-weight:600}
+.cfl{display:grid;gap:12px}
+.cr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sn2{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--tx-mu);margin:12px 0}
+.bpay{width:100%;background:var(--pr);color:#fff;border:none;border-radius:var(--r);padding:14px;
+  font-family:var(--fb);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:9px}
+.bpay:hover{background:var(--pr-d);transform:translateY(-1px)}
+
+/* ===== CONTACT ===== */
+.ct-wrap{max-width:960px;margin:0 auto;padding:36px 32px}
+.ct-hd{text-align:center;margin-bottom:36px}
+.ct-hd h2{font-family:var(--fh);font-size:28px;font-weight:800;margin-bottom:8px}
+.ct-hd p{color:var(--tx-mu)}
+.ct-lay{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cfc{background:#fff;border:1px solid var(--bd);border-radius:var(--rl);padding:24px}
+.cfc h3{font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px}
+.cfg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.bsnd{background:var(--pr);color:#fff;border:none;border-radius:9px;padding:12px;
+  font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;width:100%;transition:all .2s}
+.bsnd:hover{background:var(--pr-d)}
+.cif{display:flex;flex-direction:column;gap:14px}
+.cic{background:#fff;border:1px solid var(--bd);border-radius:var(--rl);padding:16px;display:flex;gap:12px;align-items:center}
+.cii{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.cil{font-size:11px;color:var(--tx-mu);margin-bottom:2px}
+.civ{font-size:14px;font-weight:700}
+.mp{background:var(--pr-l);border-radius:var(--rl);height:150px;display:flex;align-items:center;
+  justify-content:center;flex-direction:column;gap:7px;border:1px solid var(--sec-l);margin-top:14px}
+.mp i{font-size:36px;color:var(--pr)}.mp p{font-size:13px;font-weight:600;color:var(--pr)}
+.mp span{font-size:11px;color:var(--pr-m)}
+
+/* ===== SETTINGS ===== */
+.set-wrap{max-width:480px;margin:50px auto;padding:0 16px}
+.set-card{background:#fff;border:1px solid var(--bd);border-radius:var(--rl);padding:32px}
+.set-card h2{font-family:var(--fh);font-size:20px;font-weight:800;margin-bottom:4px;display:flex;align-items:center;gap:9px}
+.set-card .sub{font-size:13px;color:var(--tx-mu);margin-bottom:24px}
+.pg-gate{text-align:center;padding:6px 0 14px}
+.pg-gate p{font-size:13px;color:var(--tx-m);margin-bottom:14px}
+.pd-ins{display:flex;gap:10px;justify-content:center;margin-bottom:12px}
+.pd-d{width:50px;height:54px;border:2px solid var(--bd-m);border-radius:11px;text-align:center;
+  font-size:22px;font-weight:800;color:var(--pr);background:var(--bg);outline:none;transition:all .2s;font-family:var(--fh)}
+.pd-d:focus{border-color:var(--pr);box-shadow:0 0 0 3px rgba(13,92,82,.1)}
+.pd-err{font-size:12px;color:var(--err);display:none;margin-bottom:9px}
+.bul{background:var(--pr);color:#fff;border:none;border-radius:9px;padding:10px 24px;
+  font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.bul:hover{background:var(--pr-d)}
+.sf{display:none}
+.sf-fi{margin-bottom:15px}
+.sf-fi label{display:block;font-size:12px;font-weight:700;color:var(--tx-m);margin-bottom:6px}
+.sf-fi input{width:100%;border:1px solid var(--bd-m);border-radius:9px;padding:10px 13px;
+  font-family:var(--fb);font-size:13px;background:var(--bg);outline:none;transition:all .2s}
+.sf-fi input:focus{border-color:var(--pr);background:#fff}
+.cb{display:flex;align-items:center;gap:7px;border-radius:8px;padding:9px 13px;font-size:12px;font-weight:600;margin-bottom:14px}
+.cb-ok{background:var(--ok-l);border:1px solid #9ae6b4;color:var(--ok)}
+.cb-no{background:var(--warn-l);border:1px solid #faf089;color:var(--warn)}
+.bt2{display:flex;align-items:center;gap:6px;background:var(--sec-l);color:#2d7d52;
+  border:1px solid var(--sec);border-radius:9px;padding:9px 17px;font-family:var(--fb);
+  font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;margin-bottom:12px}
+.bt2:hover{background:var(--sec);color:#fff}
+.tr{font-size:12px;padding:8px 12px;border-radius:8px;margin-bottom:12px;display:none}
+.tr-ok{background:var(--ok-l);color:var(--ok);border:1px solid #9ae6b4}
+.tr-er{background:var(--err-l);color:var(--err);border:1px solid var(--err-b)}
+.bsv{width:100%;background:var(--pr);color:#fff;border:none;border-radius:9px;padding:11px;
+  font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.bsv:hover{background:var(--pr-d)}
+
+/* ALERTS */
+.al{border-radius:9px;padding:11px 14px;margin-bottom:14px;display:none;align-items:flex-start;gap:9px;font-size:13px}
+.al.sh{display:flex}
+.al-er{background:var(--err-l);border:1px solid var(--err-b);color:#c53030}
+.al-ok{background:var(--ok-l);border:1px solid #9ae6b4;color:#276749}
+
+/* MODAL */
+.mov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}
+.mov.sh{display:flex}
+.mox{background:#fff;border-radius:var(--rl);padding:36px;text-align:center;max-width:360px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.moi{width:68px;height:68px;border-radius:50%;background:var(--ok-l);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:30px;color:var(--ok)}
+.mox h3{font-family:var(--fh);font-size:20px;font-weight:800;margin-bottom:9px}
+.mox p{color:var(--tx-mu);font-size:13px;line-height:1.7;margin-bottom:14px}
+.bkc{background:var(--pr-l);border-radius:9px;padding:11px;font-family:var(--fh);font-size:22px;font-weight:800;color:var(--pr);letter-spacing:3px;margin-bottom:16px}
+.bmc{background:var(--pr);color:#fff;border:none;border-radius:9px;padding:11px 26px;font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer}
+
+/* FOOTER */
+footer{background:var(--neu);color:rgba(255,255,255,.7)}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;flex-wrap:wrap;gap:10px;font-size:12px}
+.fl{display:flex;gap:18px}.fl a{color:rgba(255,255,255,.6);text-decoration:none;font-size:12px}
+.fl a:hover{color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== PREMIUM CLINIC VISUAL REFRESH ===== */
+:root{
+  --ink:#0f172a;--teal:#0b6b61;--mint:#3dd6b1;--aqua:#d9fff6;--sky:#eaf7ff;
+  --gold:#f4b95b;--rose:#fb7185;--glass:rgba(255,255,255,.76);
+  --premium-shadow:0 24px 70px rgba(8,45,60,.16);--soft-shadow:0 14px 36px rgba(13,92,82,.12);
+}
+body{background:radial-gradient(circle at 8% 12%, rgba(61,214,177,.22), transparent 28%),radial-gradient(circle at 90% 2%, rgba(98,188,255,.20), transparent 34%),linear-gradient(180deg,#f7fffc 0%,#eef8f7 52%,#f7fbff 100%);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(rgba(13,92,82,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(13,92,82,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 82%)}
+nav{height:72px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(13,92,82,.12);box-shadow:0 10px 35px rgba(15,23,42,.06)}
+.nl .li,.sb-logo .li{box-shadow:0 10px 22px rgba(13,92,82,.24)}
+.nt a,.nc,.btn1,.btn2,.sb3,.bpay,.bt2,.bsv,.bul{position:relative;overflow:hidden}
+.nt a::after,.nc::after,.btn1::after,.btn2::after,.sb3::after,.bpay::after,.bt2::after,.bsv::after,.bul::after{content:"";position:absolute;inset:-70% auto auto -35%;width:42%;height:230%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:rotate(18deg);transition:transform .55s ease}
+.nt a:hover::after,.nc:hover::after,.btn1:hover::after,.btn2:hover::after,.sb3:hover::after,.bpay:hover::after,.bt2:hover::after,.bsv:hover::after,.bul:hover::after{transform:translateX(340%) rotate(18deg)}
+.hero{max-width:1180px;min-height:620px;grid-template-columns:minmax(0,1fr) minmax(420px,.92fr);gap:54px;padding:74px 42px 46px;position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:34px 22px 8px;border-radius:36px;background:linear-gradient(135deg,rgba(255,255,255,.76),rgba(226,255,247,.48));box-shadow:var(--premium-shadow);z-index:-2}
+.hero::after{content:"";position:absolute;top:88px;left:52%;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(61,214,177,.34),transparent 70%);filter:blur(4px);animation:floatAura 7s ease-in-out infinite;z-index:-1}
+.hb{background:rgba(13,92,82,.10);border:1px solid rgba(13,92,82,.12);box-shadow:0 8px 26px rgba(13,92,82,.08)}
+.hero h1{font-size:clamp(34px,4vw,58px);line-height:1.08;color:var(--ink);max-width:620px;text-wrap:balance}
+.hero p{font-size:16px;max-width:560px;color:#526174}
+.hbtns{gap:14px}.btn1{background:linear-gradient(135deg,var(--teal),#079b89);box-shadow:0 16px 34px rgba(13,92,82,.26);border-radius:14px;padding:14px 24px}.btn2{background:rgba(255,255,255,.76);border-color:rgba(13,92,82,.22);box-shadow:0 12px 24px rgba(13,92,82,.08);border-radius:14px;padding:12px 22px}
+.himg{height:500px;border-radius:34px;align-items:flex-end;justify-content:flex-start;overflow:hidden;background-image:linear-gradient(180deg,rgba(7,38,36,.02) 0%,rgba(7,38,36,.18) 58%,rgba(7,38,36,.66) 100%),url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=82');background-size:cover;background-position:center;box-shadow:0 28px 80px rgba(8,45,60,.28)}
+.himg>i{display:none}.himg::before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.48);border-radius:26px;pointer-events:none}.himg::after{content:"رعاية هادئة، حجز ذكي";position:absolute;top:26px;right:26px;color:#073b35;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-radius:999px;padding:9px 15px;font-size:12px;font-weight:800;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.hr{bottom:24px;left:24px;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.62);box-shadow:0 18px 44px rgba(0,0,0,.20);animation:floatCard 5.5s ease-in-out infinite}
+.inf,.sg,.stats,.bk-wrap,.pay-wrap,.ct-wrap,.sch-wrap,.set-wrap{position:relative}.ic,.sc,.dy,.sum,.frm,.pm-card,.ct-card,.ct-info,.set-card,.tc,.cal-card,.dp,.form-card,.sett-card{background:var(--glass);backdrop-filter:blur(18px);border-color:rgba(13,92,82,.13);box-shadow:0 12px 34px rgba(15,23,42,.07)}
+.ic,.sc,.dy,.sum,.frm,.pm-card,.ct-card,.ct-info,.set-card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}.ic:hover,.sc:hover,.dy:hover,.sum:hover,.frm:hover,.pm-card:hover,.ct-card:hover,.ct-info:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(13,92,82,.16)}
+.ico,.sc i,.si,.pav,.msg-av{box-shadow:inset 0 0 0 1px rgba(255,255,255,.54),0 10px 20px rgba(13,92,82,.10)}
+.svc-sec{max-width:1180px}.sh2 h2{font-size:34px;color:var(--ink)}.sc{border-radius:22px;padding:26px}.sc i{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--aqua),#fff);margin-bottom:16px}.sc .sn{font-size:18px}.sc .sd2{min-height:86px}.sb3{border-radius:11px}
+.stats{background:linear-gradient(135deg,#074b44,#0d7569 52%,#093c48);position:relative;overflow:hidden}.stats::before{content:"";position:absolute;inset:-80px;background:url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80') center/cover;opacity:.12;mix-blend-mode:screen}.sti{position:relative}.stv{color:#fff;text-shadow:0 10px 30px rgba(0,0,0,.22)}
+.pg.ac{animation:pageIn .42s ease both}.fc,.sc,.ic,.dy,.tc,.form-card,.msg-card{animation:riseIn .55s ease both}.sg .sc:nth-child(2),.inf .ic:nth-child(2){animation-delay:.06s}.sg .sc:nth-child(3),.inf .ic:nth-child(3){animation-delay:.12s}.sg .sc:nth-child(4),.inf .ic:nth-child(4){animation-delay:.18s}
+.fi input,.fi textarea,.pd-d,.sf-fi input,.sb2,input,select,textarea{transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}.fi input:focus,.fi textarea:focus,.pd-d:focus,.sf-fi input:focus,input:focus,select:focus,textarea:focus{border-color:var(--mint)!important;box-shadow:0 0 0 4px rgba(61,214,177,.18)!important;transform:translateY(-1px)}
+.po.sl,.pme.sl,.svc-opt.sl,.ts.sl,.bdt.sel,.cc.sel{box-shadow:0 0 0 4px rgba(61,214,177,.16),0 16px 34px rgba(13,92,82,.15)!important}.bpay{background:linear-gradient(135deg,#0d5c52,#12aa95)!important;box-shadow:0 18px 36px rgba(13,92,82,.28)}
+footer{background:linear-gradient(135deg,#102b35,#0b4b45)}
+.himg .hr .st{display:flex;gap:2px;font-size:13px;color:#f6c90e;flex-shrink:0}.himg .hr .st i{display:inline-block!important;width:auto!important;height:auto!important;margin:0!important;background:none!important;box-shadow:none!important;font-size:13px!important;color:#f6c90e!important;opacity:1!important}.himg .hr{max-width:230px}
+.premium-cursor-light{position:fixed;width:360px;height:360px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(61,214,177,.18),transparent 66%);transform:translate(-50%,-50%);z-index:0;mix-blend-mode:multiply;transition:opacity .2s ease}.reveal-ready{opacity:0;transform:translateY(22px)}.reveal-in{opacity:1;transform:translateY(0);transition:opacity .65s ease,transform .65s ease}
+@keyframes pageIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes floatAura{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-26px,18px) scale(1.14)}}
+@media(max-width:900px){nav{height:auto;padding:12px 18px;gap:10px;flex-wrap:wrap}.nt{order:3;width:100%;overflow-x:auto;padding-bottom:2px}.hero{grid-template-columns:1fr;min-height:auto;padding:36px 18px 24px}.hero::before{inset:16px 8px 0;border-radius:24px}.himg{height:360px}.inf,.sg,.stats{grid-template-columns:1fr!important;padding-left:18px;padding-right:18px}.dc{grid-template-columns:1fr 1fr}.hero h1{font-size:36px}.sc .sd2{min-height:auto}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.premium-cursor-light{display:none}}
+</style>
+
+<style>
+/* clinic-language-responsive-enhancements */
+html{overflow-x:hidden}body{overflow-x:hidden}.notranslate{unicode-bidi:isolate}.lang-tools{position:fixed;inset-block-end:16px;inset-inline-start:16px;z-index:5000;display:flex;gap:6px;align-items:center;background:rgba(255,255,255,.92);border:1px solid rgba(13,92,82,.18);border-radius:999px;padding:6px;box-shadow:0 14px 34px rgba(15,23,42,.16);backdrop-filter:blur(14px)}.lang-btn{border:0;border-radius:999px;padding:8px 12px;background:transparent;color:var(--tx-m);font-family:var(--fb);font-size:12px;font-weight:800;cursor:pointer;transition:all .2s}.lang-btn:hover,.lang-btn.active{background:var(--pr);color:#fff}.goog-te-gadget,.goog-te-banner-frame,.skiptranslate iframe{display:none!important}.goog-te-combo{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}body{top:0!important}font{font:inherit!important}img,svg,video{max-width:100%;height:auto}input,select,textarea,button{max-width:100%}table{width:100%}
+html[dir="ltr"] body{direction:ltr}html[dir="ltr"] .nt,html[dir="ltr"] .hbtns,html[dir="ltr"] .snav,html[dir="ltr"] .wn,html[dir="ltr"] .leg,html[dir="ltr"] .tb-right,html[dir="ltr"] .tct{direction:ltr}html[dir="ltr"] .po.sl::after,html[dir="ltr"] .pme.sl::after{left:auto;right:7px}html[dir="ltr"] .msg-card.unread{border-right:1px solid var(--bd);border-left:4px solid var(--pr)}@media(max-width:1180px){.hero{grid-template-columns:1fr;min-height:auto}.himg{max-width:720px;width:100%;margin:0 auto}.inf{grid-template-columns:repeat(2,minmax(0,1fr))}.sg{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr));padding:32px 40px}.bl,.ct-lay{grid-template-columns:1fr}.smb{position:static}.dc{grid-template-columns:repeat(3,minmax(0,1fr))}.bk-wrap,.ct-wrap,.sch-wrap{padding-inline:22px}.pm{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){nav{height:auto;padding:12px 14px;gap:10px;align-items:center}.nl{flex:1;min-width:190px}.nc{order:2;padding:9px 12px}.nt{order:3;width:100%;display:flex;overflow-x:auto;gap:6px;padding:4px 0 2px;scrollbar-width:thin}.nt a{white-space:nowrap;flex:0 0 auto}.hero{padding:28px 16px 22px;gap:24px}.hero::before{inset:10px 6px 0;border-radius:22px}.hero h1{font-size:clamp(30px,9vw,40px);line-height:1.12}.hero p{font-size:14px}.himg{height:300px;border-radius:24px}.himg::after{right:16px;left:16px;text-align:center}.hr{left:16px;right:16px;bottom:16px;max-width:none}.inf,.sg,.stats,.fg,.cfg,.por,.pm,.cr{grid-template-columns:1fr!important}.inf,.svc-sec{padding-inline:16px}.stats{padding:28px 16px}.dc{grid-template-columns:1fr}.dy{min-width:0}.tg{grid-template-columns:repeat(2,minmax(0,1fr))}.stpb{overflow-x:auto;padding-bottom:4px}.stp{min-width:76px}.sop{align-items:flex-start;gap:12px}.snav{gap:10px;flex-wrap:wrap}.snav .bnt,.snav .bbk,.bpay,.bsnd{width:100%;justify-content:center}.lang-tools{inset-inline:12px;justify-content:center}.set-card{padding:24px 18px}}
+@media(max-width:430px){.hbtns,.sc .sf{flex-direction:column;align-items:stretch}.btn1,.btn2,.sb3{width:100%;justify-content:center}.ic,.cic{align-items:flex-start}.fct,.bk-hd h2,.ct-hd h2,.sh2 h2{font-size:22px}.himg{height:250px}.tg{grid-template-columns:1fr}.cd{min-height:38px}.po,.pme{padding:12px 10px}}
+</style>
+</head>
+<body>
+<!-- clinic-language-switcher -->
+<div class="lang-tools notranslate" aria-label="Language switcher">
+  <button type="button" class="lang-btn active" data-clinic-lang="ar">العربية</button>
+  <button type="button" class="lang-btn" data-clinic-lang="en">English</button>
+  <div id="google_translate_element" aria-hidden="true"></div>
+</div>
+
+<nav>
+  <div class="nl" onclick="showPage('home')">
+    <div class="li"><i class="fa-solid fa-star-of-life"></i></div>
+    د. أحمد سالم
+  </div>
+  <div class="nt">
+    <a onclick="showPage('home')" id="nv-home" class="ac">الرئيسية</a>
+    <a onclick="showPage('schedule')" id="nv-schedule">المواعيد</a>
+    <a onclick="showPage('booking')" id="nv-booking">احجز الآن</a>
+    <a onclick="showPage('payment')" id="nv-payment">الدفع</a>
+    <a onclick="showPage('contact')" id="nv-contact">تواصل معنا</a>
+    <a onclick="showPage('settings')" id="nv-settings" class="si"><i class="fa-solid fa-gear"></i></a>
+  </div>
+  <button class="nc" onclick="showPage('booking')">احجز الآن ←</button>
+</nav>
+
+<!-- HOME -->
+<div class="pg ac" id="pg-home">
+  <div class="hero">
+    <div>
+      <div class="hb"><span class="dot"></span> نستقبل الحالات الآن</div>
+      <h1>صحتك هي أولويتنا</h1>
+      <p>نقدم رعاية طبية متميزة تعتمد على أحدث التقنيات وأفضل الكفاءات، في بيئة مريحة ومهنية تضع راحتك في المقام الأول.</p>
+      <div class="hbtns">
+        <button class="btn1" onclick="showPage('booking')"><i class="fa-solid fa-calendar-plus"></i> احجز موعدك</button>
+        <button class="btn2" onclick="showPage('schedule')"><i class="fa-solid fa-clock"></i> المواعيد المتاحة</button>
+      </div>
+    </div>
+    <div class="himg">
+      <i class="fa-solid fa-user-doctor"></i>
+      <div class="hr">
+        <div class="st"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div><div class="rv">4.9/5</div><div class="rl">تقييم المرضى</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="inf">
+    <div class="ic"><div class="ico ig"><i class="fa-solid fa-clock"></i></div>
+      <div><div class="ic-lbl">مواعيد العيادة</div><div class="ic-val">السبت – الخميس</div>
+        <div class="ic-sub">10:00 ص – 9:00 م</div>
+        <span class="cs" id="home-status"><span class="sd sdr"></span> يتم التحقق...</span></div></div>
+    <div class="ic"><div class="ico isa"><i class="fa-solid fa-location-dot"></i></div>
+      <div><div class="ic-lbl">العنوان</div><div class="ic-val">شارع الهرم، الجيزة</div>
+        <div class="ic-sub">بجوار مستشفى الجيزة الدولي</div></div></div>
+    <div class="ic"><div class="ico ine"><i class="fa-solid fa-phone"></i></div>
+      <div><div class="ic-lbl">الهاتف</div><div class="ic-val">01012345678</div>
+        <div class="ic-sub">واتساب: 01198765432</div></div></div>
+    <div class="ic"><div class="ico iw"><i class="fa-solid fa-list-ol"></i></div>
+      <div><div class="ic-lbl">الدور الحالي</div><div class="ic-val" id="q-num">رقم 7</div>
+        <div class="ic-sub" style="color:var(--pr);font-weight:600" id="slots-left">مواعيد متاحة اليوم</div></div></div>
+  </div>
+  <div class="svc-sec">
+    <div class="sh2"><h2>خدماتنا الطبية</h2><p>رعاية شاملة تلبي احتياجاتك بأعلى معايير الجودة</p></div>
+    <div class="sg">
+      <div class="sc" onclick="bkSvc('فحص عام','150')"><i class="fa-solid fa-stethoscope"></i><div class="sn">فحص عام</div><div class="sd2">تقييم شامل للحالة الصحية العامة يشمل الفحوصات الأساسية والتوجيه الطبي الدقيق.</div><div class="sf"><span class="sp">150 ج.م</span><button class="sb3">احجز ←</button></div></div>
+      <div class="sc" onclick="bkSvc('استشارة متخصصة','350')"><i class="fa-solid fa-brain"></i><div class="sn">استشارة متخصصة</div><div class="sd2">جلسات تشخيصية دقيقة مع الدكتور أحمد لمناقشة الحالات المعقدة ووضع خطط علاجية.</div><div class="sf"><span class="sp">350 ج.م</span><button class="sb3">احجز ←</button></div></div>
+      <div class="sc" onclick="bkSvc('تطعيمات ووقاية','200')"><i class="fa-solid fa-syringe"></i><div class="sn">تطعيمات ووقاية</div><div class="sd2">برامج تطعيم متكاملة للكبار والأطفال للوقاية من الأمراض الشائعة والموسمية.</div><div class="sf"><span class="sp">200 ج.م</span><button class="sb3">احجز ←</button></div></div>
+      <div class="sc" onclick="bkSvc('تحاليل ومتابعة','200')"><i class="fa-solid fa-flask"></i><div class="sn">تحاليل ومتابعة</div><div class="sd2">متابعة دورية للحالات المزمنة مع تفسير التحاليل ووضع خطة متابعة شاملة.</div><div class="sf"><span class="sp">200 ج.م</span><button class="sb3">احجز ←</button></div></div>
+      <div class="sc" onclick="bkSvc('فحص الأطفال','120')"><i class="fa-solid fa-baby"></i><div class="sn">فحص الأطفال</div><div class="sd2">رعاية متخصصة للأطفال من الولادة حتى المراهقة شاملة النمو والتطعيمات.</div><div class="sf"><span class="sp">120 ج.م</span><button class="sb3">احجز ←</button></div></div>
+      <div class="sc" onclick="bkSvc('متابعة دورية','100')"><i class="fa-solid fa-heart-pulse"></i><div class="sn">متابعة دورية</div><div class="sd2">مراجعة سريعة للحالات السابقة وإعادة تقييم الخطة العلاجية والوصفة الطبية.</div><div class="sf"><span class="sp">100 ج.م</span><button class="sb3">احجز ←</button></div></div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="sti"><div class="stv">10k+</div><div class="stl">مريض سعيد</div></div>
+    <div class="sti"><div class="stv">99%</div><div class="stl">نسبة الرضا</div></div>
+    <div class="sti"><div class="stv">15+</div><div class="stl">سنوات خبرة</div></div>
+    <div class="sti"><div class="stv">3</div><div class="stl">فروع للعيادة</div></div>
+  </div>
+  <footer><div class="ft"><span>© 2024 د. أحمد سالم. جميع الحقوق محفوظة</span><div class="fl"><a href="#">الخصوصية</a><a href="#">الشروط</a><a href="#">ساعات العمل</a></div></div></footer>
+</div>
+
+<!-- SCHEDULE -->
+<div class="pg" id="pg-schedule">
+  <div class="sch-wrap">
+    <div class="sch-top">
+      <div><h2>جدول المواعيد المتاحة</h2><p style="color:var(--tx-mu);font-size:13px;margin-top:3px">اختر الموعد المناسب لك — يتم تحديثه مباشرة من العيادة</p></div>
+      <div class="wn">
+        <button class="wnb" onclick="changeWeek(-1)"><i class="fa-solid fa-chevron-right"></i></button>
+        <span class="wnt" id="wk-lbl">الأسبوع الحالي</span>
+        <button class="wnb" onclick="changeWeek(1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="wnb" onclick="_slotsLoading=false;loadSlotsAndRender()" title="تحديث المواعيد" style="margin-right:4px"><i class="fa-solid fa-rotate-right"></i></button>
+      </div>
+    </div>
+    <div id="sch-err" style="display:none;align-items:center;gap:8px;background:#fff3eb;border:1px solid #f4c09a;border-radius:10px;padding:10px 14px;font-size:12px;color:#b85c1a;margin-bottom:12px">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <span>تعذّر الاتصال بالسيرفر — يتم عرض مواعيد تجريبية. <button onclick="_slotsLoading=false;document.getElementById('sch-err').style.display='none';loadSlotsAndRender()" style="background:none;border:none;color:#0D5C52;font-weight:700;cursor:pointer;font-size:12px;padding:0">أعد المحاولة</button></span>
+    </div>
+    <div class="leg">
+      <span style="font-size:12px;font-weight:600;color:var(--tx-m)">حالة المواعيد:</span>
+      <span class="li2"><span class="ld ldg"></span> متاح</span>
+      <span class="li2"><span class="ld ldy"></span> محدود</span>
+      <span class="li2"><span class="ld ldr"></span> مكتمل</span>
+    </div>
+    <div class="dc" id="sch-grid"></div>
+  </div>
+  <footer><div class="ft"><span>© 2024 د. أحمد سالم</span><div class="fl"><a href="#">الخصوصية</a><a href="#">الشروط</a></div></div></footer>
+</div>
+
+<!-- BOOKING -->
+<div class="pg" id="pg-booking">
+  <div class="bk-wrap">
+    <div class="bk-hd"><h2>حجز موعد جديد</h2><p>أكمل الخطوات التالية لتأكيد موعدك مع د. أحمد سالم</p></div>
+    <div class="bl">
+      <!-- Summary -->
+      <div class="smb">
+        <div class="smt"><i class="fa-solid fa-receipt" style="color:var(--pr)"></i> ملخص الحجز</div>
+        <div class="smr"><div class="sml">الخدمة</div><div class="smv" id="ss-svc">لم يتم الاختيار</div></div>
+        <div class="smr"><div class="sml">الموعد</div><div class="smv" id="ss-dt">لم يتم التحديد</div></div>
+        <div class="smr"><div class="sml">المريض</div><div class="smv" id="ss-pat">---</div></div>
+        <div class="smt2"><span class="la">الإجمالي</span><span class="am" id="ss-pr">0 ج.م</span></div>
+      </div>
+      <!-- Steps -->
+      <div>
+        <div class="stpb">
+          <div class="stp ac" id="si-1"><div class="spn">1</div><div class="spl">البيانات</div></div>
+          <div class="stp" id="si-2"><div class="spn">2</div><div class="spl">الخدمة</div></div>
+          <div class="stp" id="si-3"><div class="spn">3</div><div class="spl">التاريخ</div></div>
+          <div class="stp" id="si-4"><div class="spn">4</div><div class="spl">الوقت</div></div>
+        </div>
+        <!-- Step 1 -->
+        <div class="fc" id="step-1">
+          <!-- Pre-selected slot banner (shown when coming from schedule) -->
+          <div id="slot-banner" style="display:none;align-items:center;gap:9px;background:var(--pr-l);border:1px solid var(--sec-l);border-radius:9px;padding:10px 14px;margin-bottom:16px;font-size:13px;color:var(--pr);font-weight:600">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span id="slot-banner-txt"></span>
+            <button onclick="document.getElementById('slot-banner').style.display='none';selDate=null;selTime=null;bk.date='';bk.time='';document.getElementById('ss-dt').textContent='لم يتم التحديد'" style="margin-right:auto;background:none;border:none;color:var(--pr);cursor:pointer;font-size:13px;font-weight:700">✕ تغيير</button>
+          </div>
+          <div class="fct">البيانات الشخصية</div>
+          <div id="s1-al" class="al al-er"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+          <div class="fg">
+            <div class="fi" id="ff-fn"><label>الاسم الأول *</label><input type="text" id="i-fn" placeholder="أدخل اسمك الأول"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+            <div class="fi" id="ff-ln"><label>الاسم الأخير *</label><input type="text" id="i-ln" placeholder="أدخل اسمك الأخير"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+            <div class="fi" id="ff-ph"><label>رقم الهاتف *</label><input type="tel" id="i-ph" placeholder="01XXXXXXXXX"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> رقم غير صحيح</span></div>
+            <div class="fi"><label>البريد الإلكتروني <small style="color:var(--tx-mu)">(اختياري)</small></label><input type="email" id="i-em" placeholder="example@email.com"></div>
+          </div>
+          <div class="snav"><div></div><button class="bnt" onclick="goStep(2)">التالي: الخدمة <i class="fa-solid fa-arrow-left"></i></button></div>
+        </div>
+        <!-- Step 2 -->
+        <div class="fc" id="step-2" style="display:none">
+          <div class="fct">اختر الخدمة</div>
+          <div id="s2-al" class="al al-er"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+          <div class="svo">
+            <div class="sop" onclick="selSvc(this,'فحص عام','150')"><div class="soi"><i class="fa-solid fa-stethoscope"></i><div><div class="son">فحص عام</div><div class="sod">20-30 دقيقة</div></div></div><div class="sopr">150 ج.م</div></div>
+            <div class="sop" onclick="selSvc(this,'استشارة متخصصة','350')"><div class="soi"><i class="fa-solid fa-brain"></i><div><div class="son">استشارة متخصصة</div><div class="sod">40-45 دقيقة</div></div></div><div class="sopr">350 ج.م</div></div>
+            <div class="sop" onclick="selSvc(this,'تحاليل ومتابعة','200')"><div class="soi"><i class="fa-solid fa-flask"></i><div><div class="son">تحاليل ومتابعة</div><div class="sod">25-35 دقيقة</div></div></div><div class="sopr">200 ج.م</div></div>
+            <div class="sop" onclick="selSvc(this,'فحص الأطفال','120')"><div class="soi"><i class="fa-solid fa-baby"></i><div><div class="son">فحص الأطفال</div><div class="sod">20-25 دقيقة</div></div></div><div class="sopr">120 ج.م</div></div>
+            <div class="sop" onclick="selSvc(this,'متابعة دورية','100')"><div class="soi"><i class="fa-solid fa-heart-pulse"></i><div><div class="son">متابعة دورية</div><div class="sod">15-20 دقيقة</div></div></div><div class="sopr">100 ج.م</div></div>
+          </div>
+          <div class="snav"><button class="bbk" onclick="goStep(1)"><i class="fa-solid fa-arrow-right"></i> السابق</button><button class="bnt" onclick="goStep(3)">التالي: التاريخ <i class="fa-solid fa-arrow-left"></i></button></div>
+        </div>
+        <!-- Step 3 -->
+        <div class="fc" id="step-3" style="display:none">
+          <div class="fct">اختر التاريخ</div>
+          <div id="s3-al" class="al al-er"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+          <div id="bk-cal"></div>
+          <div class="snav"><button class="bbk" onclick="goStep(2)"><i class="fa-solid fa-arrow-right"></i> السابق</button><button class="bnt" onclick="goStep(4)">التالي: الوقت <i class="fa-solid fa-arrow-left"></i></button></div>
+        </div>
+        <!-- Step 4 -->
+        <div class="fc" id="step-4" style="display:none">
+          <div class="fct">اختر الوقت</div>
+          <div id="s4-al" class="al al-er"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+          <p style="font-size:12px;color:var(--tx-mu);margin-bottom:12px">المواعيد المتاحة ليوم: <strong id="s4-dlbl" style="color:var(--pr)">—</strong></p>
+          <div id="t-loading" style="display:none;text-align:center;padding:20px;color:var(--tx-mu);font-size:13px"><i class="fa-solid fa-rotate fa-spin"></i> جاري تحميل المواعيد...</div>
+          <div class="tg" id="t-grid"></div>
+          <div style="margin-top:12px">
+            <label style="font-size:12px;font-weight:700;color:var(--tx-m);display:block;margin-bottom:5px">ملاحظات (اختياري)</label>
+            <textarea id="i-nt" rows="2" style="border:1px solid var(--bd-m);border-radius:9px;padding:10px 13px;font-family:var(--fb);font-size:13px;outline:none;width:100%;transition:all .2s" placeholder="أي ملاحظة إضافية..."></textarea>
+          </div>
+          <div class="snav"><button class="bbk" onclick="goStep(3)"><i class="fa-solid fa-arrow-right"></i> السابق</button><button class="bnt" onclick="submitBk()"><i class="fa-solid fa-check"></i> تأكيد الحجز</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><div class="ft"><span>© 2024 د. أحمد سالم</span><div class="fl"><a href="#">الخصوصية</a></div></div></footer>
+</div>
+
+<!-- PAYMENT -->
+<div class="pg" id="pg-payment">
+  <div class="bk-wrap">
+    <div class="bk-hd"><h2>إتمام الدفع</h2><p>اختر طريقة الدفع المناسبة لتأكيد حجزك</p></div>
+    <div id="no-bk-warn" class="al al-er sh"><i class="fa-solid fa-circle-exclamation"></i>
+      <div><strong>لا يوجد حجز!</strong> <a href="#" onclick="showPage('booking')" style="color:inherit;font-weight:700;text-decoration:underline">اذهب للحجز أولاً</a></div></div>
+    <div id="pay-cnt" style="display:none">
+      <div class="bl">
+        <div class="smb">
+          <div class="smt"><i class="fa-solid fa-receipt" style="color:var(--pr)"></i> ملخص الحجز</div>
+          <div class="smr"><div class="sml">الخدمة</div><div class="smv" id="p-svc">—</div></div>
+          <div class="smr"><div class="sml">الموعد</div><div class="smv" id="p-dt">—</div></div>
+          <div class="smr"><div class="sml">السعر الكامل</div><div class="smv" id="p-full">—</div></div>
+          <div class="smr" id="p-half-r" style="display:none"><div class="sml" style="color:var(--warn)">المطلوب الآن (50%)</div><div class="smv" id="p-half" style="color:var(--warn);font-weight:800">—</div></div>
+          <div class="smr" id="p-rest-r" style="display:none"><div class="sml">الباقي عند الزيارة</div><div class="smv" id="p-rest" style="color:var(--tx-mu)">—</div></div>
+          <div class="smt2"><span class="la">المطلوب الآن</span><span class="am" id="p-due">—</span></div>
+        </div>
+        <div class="fc">
+          <div class="fct">طريقة السداد</div>
+          <div id="pay-al" class="al al-er"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+          <p style="font-size:12px;font-weight:700;color:var(--tx-m);margin-bottom:9px">أولاً: نوع الدفع</p>
+          <div class="por">
+            <div class="po sl" id="po-full" onclick="selPO('full')"><i class="fa-solid fa-circle-check"></i><div class="pol">دفع كامل</div><div class="poa" id="po-fa">0 ج.م</div><div class="pod">سداد المبلغ كاملاً</div></div>
+            <div class="po" id="po-half" onclick="selPO('half')"><i class="fa-solid fa-split"></i><div class="pol">نصف مقدم</div><div class="poa" id="po-ha">0 ج.م</div><div class="pod">الباقي عند الحضور</div></div>
+          </div>
+          <div class="hn" id="half-note" style="display:none"><i class="fa-solid fa-circle-info"></i><span>ستدفع الآن <strong id="hn-am">0</strong> ج.م فقط. الباقي <strong id="hn-rest">0</strong> ج.م يُسدَّد عند الوصول.</span></div>
+          <p style="font-size:12px;font-weight:700;color:var(--tx-m);margin-bottom:9px">ثانياً: وسيلة الدفع</p>
+          <div class="pm">
+            <div class="pme sl" id="pm-card" onclick="selPM('card')"><i class="fa-solid fa-credit-card"></i><span>بطاقة بنكية</span></div>
+            <div class="pme" id="pm-wallet" onclick="selPM('wallet')"><i class="fa-solid fa-wallet"></i><span>محفظة إلكترونية</span></div>
+            <div class="pme" id="pm-insta" onclick="selPM('insta')"><i class="fa-solid fa-bolt"></i><span>إنستاباي</span></div>
+          </div>
+          <div id="sec-card" class="cfl">
+            <div class="fi" id="fc-n"><label>الاسم على البطاقة *</label><input type="text" id="ic-n" placeholder="الاسم كما في البطاقة"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+            <div class="fi" id="fc-num"><label>رقم البطاقة *</label><input type="text" id="ic-num" placeholder="0000 0000 0000 0000" maxlength="19" oninput="fmtC(this)"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> 16 رقم مطلوب</span></div>
+            <div class="cr">
+              <div class="fi" id="fc-exp"><label>تاريخ الانتهاء *</label><input type="text" id="ic-exp" placeholder="MM/YY" maxlength="5" oninput="fmtE(this)"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> تاريخ غير صحيح</span></div>
+              <div class="fi" id="fc-cvv"><label>CVV *</label><input type="text" id="ic-cvv" placeholder="123" maxlength="3"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+            </div>
+          </div>
+          <div id="sec-wallet" style="display:none;text-align:center;padding:18px">
+            <i class="fa-solid fa-mobile-screen-button" style="font-size:44px;color:var(--pr);margin-bottom:12px;display:block"></i>
+            <p style="font-size:13px;color:var(--tx-m)">أرسل المبلغ على رقم المحفظة:</p>
+            <p style="font-size:22px;font-weight:800;color:var(--pr);margin:7px 0">01198765432</p>
+            <div class="fi" style="margin-top:12px;text-align:right"><label>رقم الإيصال *</label><input type="text" id="ic-wref" placeholder="أدخل رقم الإيصال"></div>
+          </div>
+          <div id="sec-insta" style="display:none;text-align:center;padding:18px">
+            <i class="fa-solid fa-bolt" style="font-size:44px;color:var(--pr);margin-bottom:12px;display:block"></i>
+            <p style="font-size:13px;color:var(--tx-m)">أرسل على حساب إنستاباي:</p>
+            <p style="font-size:18px;font-weight:800;color:var(--pr);margin:7px 0">drahmadsalem@instapay</p>
+            <div class="fi" style="margin-top:12px;text-align:right"><label>رقم المرجع *</label><input type="text" id="ic-iref" placeholder="أدخل رقم مرجع التحويل"></div>
+          </div>
+          <div class="sn2"><i class="fa-solid fa-lock"></i> دفع آمن 100% — تشفير SSL</div>
+          <button class="bpay" onclick="procPay()"><i class="fa-solid fa-lock"></i> <span id="pay-btn-txt">دفع 0 ج.م</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><div class="ft"><span>© 2024 د. أحمد سالم</span></div></footer>
+</div>
+
+<!-- CONTACT -->
+<div class="pg" id="pg-contact">
+  <div class="ct-wrap">
+    <div class="ct-hd"><h2>تواصل معنا</h2><p>نحن هنا للإجابة على استفساراتكم ومساعدتكم في حجز موعدكم القادم</p></div>
+    <div class="ct-lay">
+      <div class="cfc">
+        <h3>أرسل لنا رسالة</h3>
+        <p style="font-size:12px;color:var(--tx-mu);margin-bottom:14px">سنرد عليك في أقرب وقت خلال ساعات العمل</p>
+        <div id="ct-al" class="al al-er"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+        <div id="ct-ok" class="al al-ok"><i class="fa-solid fa-check-circle"></i><span>تم إرسال رسالتك! سنتواصل معك قريباً.</span></div>
+        <div class="cfg">
+          <div class="fi" id="cf-nm"><label>الاسم الكامل *</label><input type="text" id="ci-nm" placeholder="اسمك الكريم"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+          <div class="fi" id="cf-ph"><label>الهاتف *</label><input type="tel" id="ci-ph" placeholder="01XXXXXXXXX"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+        </div>
+        <div class="fi" style="margin-bottom:12px" id="cf-sb"><label>الموضوع *</label><input type="text" id="ci-sb" placeholder="كيف يمكننا مساعدتك؟"><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+        <div class="fi" style="margin-bottom:14px" id="cf-mg"><label>الرسالة *</label><textarea id="ci-mg" rows="4" style="border:1px solid var(--bd-m);border-radius:9px;padding:10px 13px;font-family:var(--fb);font-size:13px;outline:none;width:100%;resize:vertical" placeholder="اكتب رسالتك هنا..."></textarea><span class="ferr"><i class="fa-solid fa-circle-exclamation"></i> مطلوب</span></div>
+        <button class="bsnd" onclick="sendMsg()"><i class="fa-solid fa-paper-plane"></i> إرسال الرسالة</button>
+      </div>
+      <div>
+        <div class="cif">
+          <div class="cic"><div class="cii ig"><i class="fa-solid fa-location-dot"></i></div><div><div class="cil">العنوان</div><div class="civ">شارع الهرم الرئيسي، الجيزة</div></div></div>
+          <div class="cic"><div class="cii isa"><i class="fa-solid fa-phone"></i></div><div><div class="cil">الهاتف</div><div class="civ">+20 123 456 7890</div></div></div>
+          <div class="cic"><div class="cii ine"><i class="fa-brands fa-whatsapp"></i></div><div><div class="cil">واتساب</div><div class="civ">+20 109 876 5432</div></div></div>
+        </div>
+        <div class="mp"><i class="fa-solid fa-map-location-dot"></i><p>شارع الهرم، الجيزة</p><span>بجوار مستشفى الجيزة الدولي</span></div>
+      </div>
+    </div>
+  </div>
+  <footer><div class="ft"><span>© 2024 د. أحمد سالم</span><div class="fl"><a href="#">الخصوصية</a><a href="#">الشروط</a></div></div></footer>
+</div>
+
+<!-- SETTINGS -->
+<div class="pg" id="pg-settings">
+  <div class="set-wrap">
+    <div class="set-card">
+      <h2><i class="fa-solid fa-gear" style="color:var(--pr)"></i> إعدادات النظام</h2>
+      <p class="sub">ربط الموقع بـ Google Sheet عبر رابط Apps Script</p>
+      <div id="pw-gate" class="pg-gate">
+        <p><i class="fa-solid fa-lock" style="color:var(--pr)"></i> &nbsp;أدخل كلمة المرور</p>
+        <div class="pd-ins">
+          <input class="pd-d" type="password" maxlength="1" id="p0" oninput="pIn(0)" onkeydown="pKd(event,0)">
+          <input class="pd-d" type="password" maxlength="1" id="p1" oninput="pIn(1)" onkeydown="pKd(event,1)">
+          <input class="pd-d" type="password" maxlength="1" id="p2" oninput="pIn(2)" onkeydown="pKd(event,2)">
+          <input class="pd-d" type="password" maxlength="1" id="p3" oninput="pIn(3)" onkeydown="pKd(event,3)">
+        </div>
+        <div class="pd-err" id="pw-err">❌ كلمة المرور غير صحيحة</div>
+        <button class="bul" onclick="chkPwd()"><i class="fa-solid fa-unlock"></i> دخول</button>
+      </div>
+      <div id="sf" class="sf">
+        <div class="cb" id="s-cb"><i class="fa-solid fa-circle-xmark"></i> غير مربوط</div>
+        <div class="sf-fi">
+          <label><i class="fa-solid fa-link"></i> رابط Google Apps Script Web App</label>
+          <input type="url" id="s-url" placeholder="https://script.google.com/macros/s/.../exec">
+        </div>
+        <button class="bt2" onclick="testConn()"><i class="fa-solid fa-rotate" id="t-ic"></i> اختبار الاتصال</button>
+        <div class="tr" id="t-res"></div>
+        <button class="bsv" onclick="saveURL()"><i class="fa-solid fa-floppy-disk"></i> حفظ وتفعيل</button>
+        <p style="font-size:11px;color:var(--tx-mu);margin-top:10px;text-align:center">بعد الحفظ تُحفظ المواعيد والرسائل تلقائياً في Google Sheet</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="mov" id="succ-mod">
+  <div class="mox">
+    <div class="moi"><i class="fa-solid fa-check"></i></div>
+    <h3>تم تأكيد حجزك! 🎉</h3>
+    <p id="succ-msg">سيتواصل معك فريقنا لتأكيد الموعد. احتفظ برقم حجزك:</p>
+    <div class="bkc" id="succ-code">HBK-0000</div>
+    <p style="font-size:11px;color:var(--tx-mu);margin-bottom:14px">سيصلك تأكيد على رقم هاتفك</p>
+    <button class="bmc" onclick="closeMod()">عظيم، شكراً!</button>
+  </div>
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────
+let SCRIPT_URL = localStorage.getItem('clinic_script_url') || '';
+
+// ── GLOBAL STATE ────────────────────────────────────────────
+let bk          = {};
+let curStep     = 1;
+let selDate     = null;
+let selTime     = null;
+let selectedSvc = null;   // renamed — was conflicting with function selSvc()
+let payMeth     = 'card';
+let payOpt      = 'full';
+let wkOff       = 0;
+
+// Slots loaded from sheet (array of {id,day,timeLabel,from,to,maxPatients,type,active})
+let liveSlots = [];
+// Bookings for computing taken times
+let liveBookings = [];
+
+const DN = ['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const MN = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+
+// ── PAGE NAV ────────────────────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.pg').forEach(p => p.classList.remove('ac'));
+  document.querySelectorAll('.nt a').forEach(a => a.classList.remove('ac'));
+  document.getElementById('pg-' + id).classList.add('ac');
+  const el = document.getElementById('nv-' + id);
+  if (el) el.classList.add('ac');
+  window.scrollTo(0, 0);
+  if (id === 'schedule') loadSlotsAndRender();
+  if (id === 'booking')  { resetBookingForm(); loadSlotsAndRender(); }
+  if (id === 'payment')  initPay();
+  if (id === 'settings') initSett();
+}
+
+function resetBookingForm() {
+  // Show step 1, hide all others
+  for (let i = 1; i <= 4; i++) {
+    const el = document.getElementById('step-' + i);
+    if (el) el.style.display = i === 1 ? 'block' : 'none';
+    const si = document.getElementById('si-' + i);
+    if (si) si.className = 'stp' + (i === 1 ? ' ac' : '');
+  }
+  curStep = 1;
+  // Hide slot banner by default (quickBk will show it if needed)
+  const banner = document.getElementById('slot-banner');
+  if (banner) banner.style.display = 'none';
+  // If NOT coming from quickBk (no preloaded date), clear date/time
+  if (!selDate) {
+    bk = {};
+    selectedSvc = null;
+    document.getElementById('ss-svc').textContent = 'لم يتم الاختيار';
+    document.getElementById('ss-dt').textContent  = 'لم يتم التحديد';
+    document.getElementById('ss-pat').textContent = '---';
+    document.getElementById('ss-pr').textContent  = '0 ج.م';
+    // Clear all inputs
+    ['i-fn','i-ln','i-ph','i-em','i-nt'].forEach(id => {
+      const el = document.getElementById(id); if(el) el.value = '';
+    });
+    document.querySelectorAll('.sop').forEach(o => o.classList.remove('sl'));
+  }
+}
+
+// ── CLINIC STATUS ───────────────────────────────────────────
+function updStatus() {
+  const now=new Date(); const h=now.getHours()+now.getMinutes()/60; const d=now.getDay();
+  const el=document.getElementById('home-status'); if(!el)return;
+  if(d===5){el.className='cs cc';el.innerHTML='<span class="sd sdr"></span> مغلق (الجمعة)';}
+  else if(h>=10&&h<21){el.className='cs co';el.innerHTML='<span class="sd sdg"></span> مفتوح — يغلق بعد '+Math.floor(21-h)+' س';}
+  else{el.className='cs cc';el.innerHTML='<span class="sd sdr"></span> مغلق — يفتح 10 صباحاً';}
+}
+updStatus(); setInterval(updStatus,60000);
+let qq=7; setInterval(()=>{qq=Math.max(1,qq+(Math.random()>.6?1:-1));const e=document.getElementById('q-num');if(e)e.textContent='رقم '+qq;},12000);
+
+// ── LOAD SLOTS FROM SHEET ──────────────────────────────────
+
+function toYmd(dateObj) {
+  if (!(dateObj instanceof Date) || isNaN(dateObj)) return '';
+  return dateObj.getFullYear() + '-' +
+    String(dateObj.getMonth() + 1).padStart(2, '0') + '-' +
+    String(dateObj.getDate()).padStart(2, '0');
+}
+
+function parseAnySlotDate(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return null;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) {
+    const [y, m, d] = raw.split('-').map(Number);
+    return new Date(y, m - 1, d);
+  }
+  const slash = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (slash) return new Date(Number(slash[3]), Number(slash[2]) - 1, Number(slash[1]));
+  const parsed = new Date(raw);
+  return isNaN(parsed) ? null : new Date(parsed.getFullYear(), parsed.getMonth(), parsed.getDate());
+}
+
+function getBaseWeekSaturday(refDate = new Date()) {
+  const day = refDate.getDay(); // 0=Sun .. 6=Sat
+  const daysSinceSat = day === 6 ? 0 : day + 1;
+  const weekSat = new Date(refDate);
+  const baseOffset = (day === 5 && wkOff === 0) ? 1 : 0;
+  weekSat.setDate(refDate.getDate() - daysSinceSat + (wkOff + baseOffset) * 7);
+  weekSat.setHours(0,0,0,0);
+  return weekSat;
+}
+
+function getSaturdayForDate(dateObj) {
+  const out = new Date(dateObj);
+  const day = out.getDay();
+  const daysSinceSat = day === 6 ? 0 : day + 1;
+  out.setDate(out.getDate() - daysSinceSat);
+  out.setHours(0,0,0,0);
+  return out;
+}
+
+function weekHasSlots(weekSat) {
+  for (let i = 0; i < 6; i++) {
+    const d = new Date(weekSat);
+    d.setDate(weekSat.getDate() + i);
+    const ymd = toYmd(d);
+    const dName = DN[d.getDay()];
+    if (liveSlots.some(s => {
+      const sd = (s.specificDate || '').trim();
+      return sd ? sd === ymd : s.day === dName;
+    })) return true;
+  }
+  return false;
+}
+
+function alignWeekToNearestSlots() {
+  if (!liveSlots.length) return;
+  const currentWeekSat = getBaseWeekSaturday(new Date());
+  if (weekHasSlots(currentWeekSat)) return;
+
+  const datedSlots = liveSlots
+    .map(s => parseAnySlotDate(s.specificDate))
+    .filter(Boolean)
+    .sort((a, b) => a - b);
+
+  if (!datedSlots.length) return;
+
+  const targetDate = datedSlots.find(d => d >= currentWeekSat) || datedSlots[0];
+  const targetWeekSat = getSaturdayForDate(targetDate);
+  wkOff = Math.round((targetWeekSat - currentWeekSat) / (7 * 24 * 60 * 60 * 1000));
+}
+
+// Normalize a slot: unify timeLabel & displayTime to a clean short label
+// so that booking.time always matches slot.timeLabel after saving
+function normalizeSlot(s) {
+  // Staff saves: timeLabel = "10:00 ص — 11:00 ص", displayTime = "10:00 ص"
+  // We use displayTime as the canonical single label for everything
+  const short = (s.displayTime && s.displayTime.trim())
+    ? s.displayTime.trim()
+    : (s.timeLabel && s.timeLabel.includes('—')
+        ? s.timeLabel.split('—')[0].trim()
+        : (s.timeLabel || '').trim());
+  // Normalise specificDate: ensure empty string not undefined, so filter works
+  const sd = toYmd(parseAnySlotDate(s.specificDate)) || (s.specificDate || '').trim();
+  const activeVal = String(s.active == null ? 'true' : s.active).trim().toLowerCase();
+  return Object.assign({}, s, {
+    timeLabel:    short,   // canonical label used for booking + matching
+    displayTime:  short,
+    shortLabel:   short,
+    specificDate: sd,
+    active: activeVal || 'true'
+  });
+}
+
+const DEMO_SLOTS = [
+  {id:'d1',day:'السبت',   specificDate:'',timeLabel:'10:00 ص',displayTime:'10:00 ص',from:'10:00',to:'11:00',maxPatients:'3',type:'جميع الخدمات',active:'true'},
+  {id:'d2',day:'السبت',   specificDate:'',timeLabel:'11:00 ص',displayTime:'11:00 ص',from:'11:00',to:'12:00',maxPatients:'3',type:'جميع الخدمات',active:'true'},
+  {id:'d3',day:'السبت',   specificDate:'',timeLabel:'12:00 م',displayTime:'12:00 م',from:'12:00',to:'13:00',maxPatients:'3',type:'جميع الخدمات',active:'true'},
+  {id:'d4',day:'الأحد',   specificDate:'',timeLabel:'10:00 ص',displayTime:'10:00 ص',from:'10:00',to:'11:00',maxPatients:'3',type:'جميع الخدمات',active:'true'},
+  {id:'d5',day:'الأحد',   specificDate:'',timeLabel:'12:00 م',displayTime:'12:00 م',from:'12:00',to:'13:00',maxPatients:'2',type:'جميع الخدمات',active:'true'},
+  {id:'d6',day:'الاثنين', specificDate:'',timeLabel:'10:00 ص',displayTime:'10:00 ص',from:'10:00',to:'11:00',maxPatients:'3',type:'جميع الخدمات',active:'true'},
+  {id:'d7',day:'الثلاثاء',specificDate:'',timeLabel:'4:00 م', displayTime:'4:00 م', from:'16:00',to:'17:00',maxPatients:'3',type:'جميع الخدمات',active:'true'},
+  {id:'d8',day:'الأربعاء',specificDate:'',timeLabel:'6:00 م', displayTime:'6:00 م', from:'18:00',to:'19:00',maxPatients:'2',type:'جميع الخدمات',active:'true'},
+  {id:'d9',day:'الخميس',  specificDate:'',timeLabel:'8:00 م', displayTime:'8:00 م', from:'20:00',to:'21:00',maxPatients:'3',type:'جميع الخدمات',active:'true'},
+];
+
+let _slotsLoading = false;
+
+async function loadSlotsAndRender() {
+  if(_slotsLoading) return;
+
+  // Show loading indicator in grid
+  const grid = document.getElementById('sch-grid');
+  if(grid) grid.innerHTML =
+    '<div style="grid-column:1/-1;text-align:center;padding:40px 0;color:var(--tx-mu);font-size:13px">' +
+    '<i class="fa-solid fa-rotate fa-spin" style="margin-left:6px"></i> جاري تحميل المواعيد...</div>';
+
+  // No URL connected -> show demo slots immediately
+  if(!SCRIPT_URL) {
+    liveSlots = DEMO_SLOTS.map(normalizeSlot);
+    renderScheduleGrid();
+    renderTimeSlots();
+    return;
+  }
+
+  _slotsLoading = true;
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 12000);
+    const [sRes, bRes] = await Promise.all([
+      fetch(SCRIPT_URL + '?action=getSlots',    { signal: ctrl.signal }),
+      fetch(SCRIPT_URL + '?action=getBookings', { signal: ctrl.signal })
+    ]);
+    clearTimeout(timer);
+
+    const sd = await sRes.json();
+    const bd = await bRes.json();
+
+    if(sd.slots && sd.slots.length > 0) {
+      liveSlots = sd.slots
+        .map(normalizeSlot)
+        .filter(s => s.active === 'true' || s.active === '1');
+    } else {
+      // Sheet returned empty -> show demo slots as placeholder
+      liveSlots = DEMO_SLOTS.map(normalizeSlot);
+    }
+    if(bd.bookings) liveBookings = bd.bookings;
+
+  } catch(e) {
+    console.warn('Slots fetch failed:', e.message || e);
+    // On any error fallback to demo so grid is never blank
+    liveSlots = DEMO_SLOTS.map(normalizeSlot);
+  }
+  _slotsLoading = false;
+  alignWeekToNearestSlots();
+  renderScheduleGrid();
+  renderTimeSlots();
+}
+
+// ── SCHEDULE GRID ─────────────────────────────────────────
+function renderScheduleGrid() {
+  const grid = document.getElementById('sch-grid'); if (!grid) return;
+  const now  = new Date();
+
+  // Build week starting from Saturday
+  // Week runs Sat-Thu (Friday is closed). Go back to most recent Saturday,
+  // but if today IS Friday bump forward to next Saturday (upcoming week).
+  const weekSat = getBaseWeekSaturday(now);
+
+  const weekEnd = new Date(weekSat);
+  weekEnd.setDate(weekSat.getDate() + 5); // Thu = Sat+5
+
+  document.getElementById('wk-lbl').textContent =
+    weekSat.getDate() + ' ' + MN[weekSat.getMonth()] +
+    ' – ' + weekEnd.getDate() + ' ' + MN[weekEnd.getMonth()] + ' ' + weekSat.getFullYear();
+
+  // Generate 6 days: Sat, Sun, Mon, Tue, Wed, Thu (skip Fri)
+  let html = '';
+  for (let i = 0; i < 6; i++) {
+    const d       = new Date(weekSat);
+    d.setDate(weekSat.getDate() + i);
+    const isToday = d.toDateString() === now.toDateString();
+    const dName   = DN[d.getDay()];
+    // Build YYYY-MM-DD string for this cell
+    const ymd = d.getFullYear() + '-' +
+      String(d.getMonth()+1).padStart(2,'0') + '-' +
+      String(d.getDate()).padStart(2,'0');
+    // A slot matches this day if:
+    //   - it has a non-empty specificDate that equals this exact date, OR
+    //   - it has NO specificDate (or empty string) and its day name matches (recurring weekly)
+    const daySlots = liveSlots.filter(s => {
+      const sd = (s.specificDate || '').trim();
+      return sd ? sd === ymd : s.day === dName;
+    });
+
+    html += `<div class="dy ${isToday ? 'tod' : ''}">
+      <div class="dyh ${isToday ? 'th' : ''}">
+        <div class="dyn">${dName}</div>
+        <div class="dyd">${d.getDate()}</div>
+        <div style="font-size:10px;margin-top:2px;${isToday ? 'color:rgba(255,255,255,.7)' : 'color:var(--tx-mu)'}">${MN[d.getMonth()]}</div>
+      </div>
+      <div class="dys">`;
+
+    if (!daySlots.length) {
+      html += `<div style="font-size:11px;color:var(--tx-mu);padding:8px 4px;text-align:center">لا توجد مواعيد</div>`;
+    } else {
+      daySlots.forEach(s => {
+        // Use timeLabel for matching (consistent with bookings), shortLabel for display
+        const displayLbl = s.shortLabel || s.displayTime || s.timeLabel;
+        const taken = countTaken(d, s.timeLabel);
+        const max   = parseInt(s.maxPatients) || 3;
+        const avail = max - taken;
+        let cls = 'av', lbl = 'متاح';
+        if (avail <= 0)      { cls = 'tk'; lbl = 'مكتمل'; }
+        else if (avail === 1){ cls = 'fw'; lbl = 'متبقي 1'; }
+        const clickFn = cls !== 'tk'
+          ? `quickBk('${dName}','${s.timeLabel}',${d.getFullYear()},${d.getMonth()},${d.getDate()})`
+          : '';
+        html += `<div class="ds ${cls}" ${clickFn ? `onclick="${clickFn}"` : ''}>
+          <span class="dst">${displayLbl}</span>
+          <span class="dss">${lbl}</span>
+        </div>`;
+      });
+    }
+    html += `</div></div>`;
+  }
+  grid.innerHTML = html;
+}
+
+function changeWeek(dir) { wkOff += dir; renderScheduleGrid(); }
+
+function countTaken(date, timeLabel) {
+  return liveBookings.filter(b => {
+    const bd = parseBookingDate(b.date);
+    if(!bd || bd.toDateString() !== date.toDateString()) return false;
+    if(b.status === 'ملغى') return false;
+    // Match exact OR if booking.time starts with our timeLabel (handles range vs short label)
+    return b.time === timeLabel ||
+           b.time.startsWith(timeLabel) ||
+           timeLabel.startsWith(b.time);
+  }).length;
+}
+
+function parseBookingDate(dateStr) {
+  try {
+    const parts = (dateStr || '').trim().split(' ');
+    // Format: "السبت 1 يناير 2026"
+    const d = parseInt(parts[1]); const m = MN.indexOf(parts[2]); const y = parseInt(parts[3]);
+    if (m < 0 || isNaN(d) || isNaN(y)) return null;
+    return new Date(y, m, d);
+  } catch(e) { return null; }
+}
+
+function quickBk(dayName, time, y, m, d) {
+  // Store date/time first, then navigate to booking page starting at step 1
+  selDate   = new Date(y, m, d);
+  selTime   = time;
+  const ds  = dayName + ' ' + d + ' ' + MN[m] + ' ' + y;
+  bk        = {};               // full reset so user fills name/phone
+  bk.date   = ds;
+  bk.time   = time;
+  showPage('booking');          // resetBookingForm() is called inside showPage
+  // After reset, show a banner telling user which slot they picked
+  setTimeout(() => {
+    const banner = document.getElementById('slot-banner');
+    if (banner) {
+      banner.style.display = 'flex';
+      document.getElementById('slot-banner-txt').textContent =
+        'تم اختيار موعد ' + time + ' — ' + ds;
+    }
+    // Update summary sidebar
+    document.getElementById('ss-dt').textContent = ds + ' — ' + time;
+  }, 80);
+}
+
+// ── BOOKING CALENDAR ────────────────────────────────────────
+function renderCal() {
+  const c=document.getElementById('bk-cal'); if(!c)return;
+  const now=new Date(); const yr=now.getFullYear(); const mo=now.getMonth();
+  const fd=new Date(yr,mo,1).getDay(); const dim=new Date(yr,mo+1,0).getDate();
+  let h=`<p style="font-size:13px;font-weight:600;color:var(--tx-m);margin-bottom:10px">${MN[mo]} ${yr}</p><div class="cg">`;
+  ['أح','اث','ثل','أر','خم','جم','سب'].forEach(x=>h+=`<div class="cdh">${x}</div>`);
+  for(let i=0;i<fd;i++) h+=`<div class="cd em"></div>`;
+  for(let d=1;d<=dim;d++){
+    const dt=new Date(yr,mo,d);
+    const isFri=dt.getDay()===5;
+    const isPast=dt<new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    const isSel=selDate&&selDate.getDate()===d&&selDate.getMonth()===mo;
+    let cls='cd';
+    if(isFri||isPast) cls+=' di';
+    else if(isSel) cls+=' sl';
+    else if(d===now.getDate()) cls+=' to';
+    h+=`<div class="${cls}" ${!isFri&&!isPast?`onclick="selD(${yr},${mo},${d})"`:''}>${d}</div>`;
+  }
+  c.innerHTML=h+'</div>';
+}
+
+function selD(y,m,d) {
+  selDate=new Date(y,m,d); selTime=null;
+  const ds=DN[selDate.getDay()]+' '+d+' '+MN[m]+' '+y;
+  bk.date=ds;
+  document.getElementById('ss-dt').textContent=ds;
+  document.getElementById('s4-dlbl').textContent=ds;
+  renderCal();
+}
+
+// ── TIME SLOTS (FIX 2: from liveSlots filtered by day) ──────
+function renderTimeSlots() {
+  const g=document.getElementById('t-grid'); if(!g)return;
+  g.innerHTML='';
+  if(!selDate){
+    g.innerHTML='<div style="font-size:12px;color:var(--tx-mu);grid-column:1/-1;padding:12px">اختر تاريخاً أولاً</div>';
+    return;
+  }
+  const dName=DN[selDate.getDay()];
+  const ymd2 = selDate.getFullYear() + '-' +
+    String(selDate.getMonth()+1).padStart(2,'0') + '-' +
+    String(selDate.getDate()).padStart(2,'0');
+  // Match: specific-date slot (exact date) OR recurring weekly slot (no specificDate)
+  const daySlots=liveSlots.filter(s=> {
+    const sd = (s.specificDate || '').trim();
+    return sd ? sd === ymd2 : s.day === dName;
+  });
+  if(!daySlots.length){
+    g.innerHTML='<div class="ts no-slot" style="grid-column:1/-1">لا توجد مواعيد متاحة لهذا اليوم</div>';
+    return;
+  }
+  daySlots.forEach(s=>{
+    const taken=countTaken(selDate, s.timeLabel);
+    const max=parseInt(s.maxPatients)||3;
+    const isTaken=taken>=max;
+    const displayLbl = s.shortLabel || s.displayTime || s.timeLabel;
+    const div=document.createElement('div');
+    div.className='ts'+(isTaken?' tk':s.timeLabel===selTime?' sl':'');
+    div.textContent=displayLbl+(isTaken?' (محجوز)':'');
+    if(!isTaken) div.onclick=()=>{
+      selTime=s.timeLabel; bk.time=s.timeLabel;
+      document.getElementById('ss-dt').textContent=(bk.date||'')+(bk.date?' — ':'')+displayLbl;
+      renderTimeSlots();
+    };
+    g.appendChild(div);
+  });
+}
+
+// ── BOOKING STEPS ────────────────────────────────────────────
+function bkSvc(name, price) {
+  showPage('booking');
+  setTimeout(() => {
+    bk.service = name; bk.price = parseInt(price)||0;
+    selectedSvc = { name, price };
+    document.getElementById('ss-svc').textContent = name;
+    document.getElementById('ss-pr').textContent  = price + ' ج.م';
+    document.querySelectorAll('.sop').forEach(o => {
+      if (o.querySelector('.son') && o.querySelector('.son').textContent === name) {
+        o.classList.add('sl');
+      }
+    });
+  }, 150);
+}
+
+function selSvc(el, name, price) {
+  document.querySelectorAll('.sop').forEach(o => o.classList.remove('sl'));
+  el.classList.add('sl');
+  selectedSvc = { name, price };
+  bk.service  = name;
+  bk.price    = parseInt(price) || 0;
+  document.getElementById('ss-svc').textContent = name;
+  document.getElementById('ss-pr').textContent  = price + ' ج.م';
+}
+
+function goStep(n) {
+  if (n > curStep && !valStep(curStep)) return;
+  for (let i = 1; i <= 4; i++) {
+    const el = document.getElementById('step-' + i);
+    if (el) el.style.display = i === n ? 'block' : 'none';
+    const si = document.getElementById('si-' + i);
+    if (si) si.className = 'stp' + (i === n ? ' ac' : i < n ? ' dn' : '');
+  }
+  curStep = n;
+  if (n === 3) renderCal();
+  if (n === 4) renderTimeSlots();
+}
+
+function valStep(s){
+  clrErr();
+  if(s===1){
+    const fn=g('i-fn'),ln=g('i-ln'),ph=g('i-ph'); let ok=true;
+    if(!fn){sErr('ff-fn',true);ok=false;}
+    if(!ln){sErr('ff-ln',true);ok=false;}
+    if(!ph||!/^0[0-9]{10}$/.test(ph.replace(/\s/g,''))){sErr('ff-ph',true);ok=false;}
+    if(!ok){shAl('s1-al','يرجى ملء الحقول المطلوبة بشكل صحيح');return false;}
+    bk.fname=fn; bk.lname=ln; bk.phone=ph; bk.email=g('i-em');
+    document.getElementById('ss-pat').textContent=fn+' '+ln;
+    hdAl('s1-al'); return true;
+  }
+  if(s===2){if(!selectedSvc && !bk.service){shAl('s2-al','يرجى اختيار الخدمة');return false;} hdAl('s2-al');return true;}
+  if(s===3){if(!selDate){shAl('s3-al','يرجى اختيار تاريخ الزيارة');return false;} hdAl('s3-al');return true;}
+  if(s===4){if(!selTime){shAl('s4-al','يرجى اختيار وقت الموعد');return false;} hdAl('s4-al');return true;}
+  return true;
+}
+function g(id){return(document.getElementById(id)||{}).value||'';}
+function sErr(id,v){const e=document.getElementById(id);if(e)e.classList.toggle('er',v);}
+function clrErr(){document.querySelectorAll('.fi.er').forEach(e=>e.classList.remove('er'));}
+function shAl(id,msg){const e=document.getElementById(id);if(e){e.querySelector('span').textContent=msg;e.classList.add('sh');}}
+function hdAl(id){const e=document.getElementById(id);if(e)e.classList.remove('sh');}
+
+function submitBk() {
+  if (!valStep(4)) return;
+  bk.notes        = g('i-nt');
+  bk.code         = 'HBK-' + Math.floor(1000 + Math.random() * 9000);
+  bk.status       = 'مؤكد - في انتظار الدفع';
+  bk.payStatus    = 'غير مدفوع';
+  bk.paidAmount   = 0;
+  bk.payOption    = '';
+  bk.submittedAt  = new Date().toLocaleString('ar-EG');
+  saveToSheet(bk);
+  showPage('payment');
+}
+
+// ── SHEET API ────────────────────────────────────────────────
+async function saveToSheet(data){
+  const url=SCRIPT_URL||localStorage.getItem('clinic_script_url');
+  if(!url)return;
+  try{await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'addBooking',data}),mode:'no-cors'});}
+  catch(e){console.error(e);}
+}
+async function pushToSheet(action,payload){
+  const url=SCRIPT_URL||localStorage.getItem('clinic_script_url');
+  if(!url)return;
+  try{await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,...payload}),mode:'no-cors'});}
+  catch(e){console.error(e);}
+}
+
+// ── PAYMENT ──────────────────────────────────────────────────
+function initPay(){
+  const warn=document.getElementById('no-bk-warn');
+  const cnt=document.getElementById('pay-cnt');
+  if(!bk.code){warn.classList.add('sh');cnt.style.display='none';return;}
+  warn.classList.remove('sh'); cnt.style.display='block';
+  const full=bk.price||0; const half=Math.ceil(full/2);
+  document.getElementById('p-svc').textContent=bk.service||'—';
+  document.getElementById('p-dt').textContent=(bk.date||'')+(bk.time?' — '+bk.time:'');
+  document.getElementById('p-full').textContent=full+' ج.م';
+  document.getElementById('po-fa').textContent=full+' ج.م';
+  document.getElementById('po-ha').textContent=half+' ج.م';
+  payOpt='full'; selPO('full');
+}
+function selPO(opt){
+  payOpt=opt;
+  const full=bk.price||0; const half=Math.ceil(full/2); const rest=full-half;
+  document.getElementById('po-full').classList.toggle('sl',opt==='full');
+  document.getElementById('po-half').classList.toggle('sl',opt==='half');
+  document.getElementById('half-note').style.display=opt==='half'?'flex':'none';
+  document.getElementById('p-half-r').style.display=opt==='half'?'flex':'none';
+  document.getElementById('p-rest-r').style.display=opt==='half'?'flex':'none';
+  if(opt==='half'){
+    document.getElementById('hn-am').textContent=half;
+    document.getElementById('hn-rest').textContent=rest;
+    document.getElementById('p-half').textContent=half+' ج.م';
+    document.getElementById('p-rest').textContent=rest+' ج.م';
+    document.getElementById('p-due').textContent=half+' ج.م';
+    document.getElementById('pay-btn-txt').textContent='دفع '+half+' ج.م (نصف مقدم)';
+  } else {
+    document.getElementById('p-due').textContent=full+' ج.م';
+    document.getElementById('pay-btn-txt').textContent='دفع '+full+' ج.م';
+  }
+}
+function selPM(m){
+  payMeth=m;
+  ['card','wallet','insta'].forEach(t=>document.getElementById('pm-'+t).classList.remove('sl'));
+  document.getElementById('pm-'+m).classList.add('sl');
+  document.getElementById('sec-card').style.display=m==='card'?'grid':'none';
+  document.getElementById('sec-wallet').style.display=m==='wallet'?'block':'none';
+  document.getElementById('sec-insta').style.display=m==='insta'?'block':'none';
+}
+function fmtC(i){let v=i.value.replace(/\D/g,'').slice(0,16);i.value=v.replace(/(.{4})/g,'$1 ').trim();}
+function fmtE(i){let v=i.value.replace(/\D/g,'').slice(0,4);if(v.length>2)v=v.slice(0,2)+'/'+v.slice(2);i.value=v;}
+
+function procPay(){
+  clrErr(); hdAl('pay-al'); let ok=true;
+  if(payMeth==='card'){
+    const n=g('ic-n'),num=g('ic-num').replace(/\s/g,''),exp=g('ic-exp'),cvv=g('ic-cvv');
+    if(!n){sErr('fc-n',true);ok=false;}
+    if(num.length!==16){sErr('fc-num',true);ok=false;}
+    if(!/^\d{2}\/\d{2}$/.test(exp)){sErr('fc-exp',true);ok=false;}
+    if(cvv.length<3){sErr('fc-cvv',true);ok=false;}
+    if(!ok){shAl('pay-al','يرجى ملء بيانات البطاقة بشكل صحيح');return;}
+  }
+  if(payMeth==='wallet'&&!g('ic-wref')){shAl('pay-al','يرجى إدخال رقم الإيصال');return;}
+  if(payMeth==='insta'&&!g('ic-iref')){shAl('pay-al','يرجى إدخال رقم مرجع التحويل');return;}
+  const full=bk.price||0; const half=Math.ceil(full/2);
+  const paid=payOpt==='half'?half:full;
+  const pStat=payOpt==='half'?'مدفوع نصف':'مدفوع بالكامل';
+  bk.paidAmount=paid; bk.payOption=payOpt==='half'?'نصف':'كامل'; bk.payStatus=pStat;
+  pushToSheet('updateBooking',{code:bk.code,field:'payStatus',value:pStat});
+  pushToSheet('updateBooking',{code:bk.code,field:'paidAmount',value:paid});
+  pushToSheet('updateBooking',{code:bk.code,field:'payOption',value:bk.payOption});
+  const msg=payOpt==='half'
+    ?`تم دفع ${paid} ج.م (نصف المبلغ). الباقي ${full-paid} ج.م عند الحضور. رقم حجزك:`
+    :`تم الدفع بالكامل (${paid} ج.م). سنتواصل معك لتأكيد الموعد. رقم حجزك:`;
+  document.getElementById('succ-msg').textContent=msg;
+  document.getElementById('succ-code').textContent=bk.code;
+  document.getElementById('succ-mod').classList.add('sh');
+}
+function closeMod() {
+  document.getElementById('succ-mod').classList.remove('sh');
+  bk = {}; selectedSvc = null; curStep = 1;
+  showPage('home');
+}
+
+// ── CONTACT ──────────────────────────────────────────────────
+function sendMsg(){
+  clrErr(); hdAl('ct-al');
+  const nm=g('ci-nm'),ph=g('ci-ph'),sb=g('ci-sb'),mg=g('ci-mg'); let ok=true;
+  if(!nm){sErr('cf-nm',true);ok=false;}
+  if(!ph){sErr('cf-ph',true);ok=false;}
+  if(!sb){sErr('cf-sb',true);ok=false;}
+  if(!mg){sErr('cf-mg',true);ok=false;}
+  if(!ok){shAl('ct-al','يرجى ملء جميع الحقول المطلوبة');return;}
+  pushToSheet('addMessage',{data:{name:nm,phone:ph,subject:sb,message:mg}});
+  document.getElementById('ct-ok').classList.add('sh');
+  setTimeout(()=>document.getElementById('ct-ok').classList.remove('sh'),5000);
+  ['ci-nm','ci-ph','ci-sb','ci-mg'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+}
+
+// ── SETTINGS ─────────────────────────────────────────────────
+const PWD='0000';
+function pIn(i){
+  const v=document.getElementById('p'+i).value;
+  if(v&&i<3)document.getElementById('p'+(i+1)).focus();
+  const pwd=[0,1,2,3].map(j=>document.getElementById('p'+j).value).join('');
+  if(pwd.length===4)chkPwd();
+}
+function pKd(e,i){
+  if(e.key==='Backspace'&&!document.getElementById('p'+i).value&&i>0)document.getElementById('p'+(i-1)).focus();
+  if(e.key==='Enter')chkPwd();
+}
+function chkPwd(){
+  const pwd=[0,1,2,3].map(i=>document.getElementById('p'+i).value).join('');
+  if(pwd===PWD){document.getElementById('pw-gate').style.display='none';document.getElementById('sf').style.display='block';}
+  else{
+    document.getElementById('pw-err').style.display='block';
+    [0,1,2,3].forEach(i=>{const e=document.getElementById('p'+i);e.value='';e.style.borderColor='var(--err)';});
+    document.getElementById('p0').focus();
+    setTimeout(()=>[0,1,2,3].forEach(i=>document.getElementById('p'+i).style.borderColor=''),1500);
+  }
+}
+function initSett(){
+  document.getElementById('pw-gate').style.display='block';
+  document.getElementById('sf').style.display='none';
+  document.getElementById('pw-err').style.display='none';
+  [0,1,2,3].forEach(i=>document.getElementById('p'+i).value='');
+  setTimeout(()=>document.getElementById('p0').focus(),100);
+  const saved=localStorage.getItem('clinic_script_url')||'';
+  const cb=document.getElementById('s-cb');
+  if(saved){cb.className='cb cb-ok';cb.innerHTML='<i class="fa-solid fa-circle-check"></i> مربوط بنجاح';}
+  else{cb.className='cb cb-no';cb.innerHTML='<i class="fa-solid fa-circle-xmark"></i> غير مربوط';}
+  const inp=document.getElementById('s-url'); if(saved)inp.value=saved;
+}
+function saveURL(){
+  const url=(document.getElementById('s-url').value||'').trim();
+  if(!url||!url.startsWith('https://script.google.com')){alert('يرجى إدخال رابط Apps Script صحيح');return;}
+  localStorage.setItem('clinic_script_url',url); SCRIPT_URL=url;
+  const cb=document.getElementById('s-cb');
+  cb.className='cb cb-ok'; cb.innerHTML='<i class="fa-solid fa-circle-check"></i> تم الحفظ والربط!';
+  setTimeout(()=>showPage('home'),1200);
+}
+async function testConn(){
+  const url=(document.getElementById('s-url').value||'').trim();
+  const res=document.getElementById('t-res'); const ic=document.getElementById('t-ic');
+  if(!url){alert('أدخل الرابط أولاً');return;}
+  ic.style.animation='spin 1s linear infinite'; res.style.display='none';
+  try{
+    const r=await fetch(url+'?action=getStats',{mode:'cors'});
+    const d=await r.json();
+    if(d&&!d.error){res.innerHTML='<i class="fa-solid fa-check-circle"></i> الاتصال ناجح! إجمالي الحجوزات: <strong>'+d.total+'</strong>';res.className='tr tr-ok';}
+    else{res.innerHTML='<i class="fa-solid fa-circle-xmark"></i> خطأ: '+(d.error||'غير معروف');res.className='tr tr-er';}
+  }catch(e){res.innerHTML='<i class="fa-solid fa-circle-xmark"></i> تعذّر الاتصال — تأكد من نشر Script كـ Web App (Anyone)';res.className='tr tr-er';}
+  res.style.display='block'; ic.style.animation='';
+}
+
+// ── INIT ─────────────────────────────────────────────────────
+(function(){const s=localStorage.getItem('clinic_script_url');if(s)SCRIPT_URL=s;})();
+loadSlotsAndRender();
+</script>
+<script>
+(function(){
+  const light=document.createElement('div');
+  light.className='premium-cursor-light';
+  light.style.opacity='0';
+  document.body.appendChild(light);
+  window.addEventListener('pointermove',function(e){
+    light.style.opacity='.9';
+    light.style.left=e.clientX+'px';
+    light.style.top=e.clientY+'px';
+  },{passive:true});
+  const selector='.ic,.sc,.dy,.tc,.form-card,.msg-card,.sum,.frm,.pm-card,.ct-card,.ct-info,.set-card,.cal-card,.dp';
+  const applyReveal=function(root){
+    const nodes=(root||document).querySelectorAll(selector);
+    if(!('IntersectionObserver' in window)){nodes.forEach(n=>n.classList.add('reveal-in'));return;}
+    const io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('reveal-in');io.unobserve(entry.target);}});},{threshold:.12});
+    nodes.forEach(function(n,i){if(n.dataset.revealBound)return;n.dataset.revealBound='1';n.classList.add('reveal-ready');n.style.transitionDelay=Math.min(i%6*55,275)+'ms';io.observe(n);});
+  };
+  applyReveal();
+  const mo=new MutationObserver(function(){applyReveal();});
+  mo.observe(document.body,{childList:true,subtree:true});
+})();
+</script>
+
+<!-- clinic-language-script -->
+<script>
+(function(){
+  const storageKey='clinic_preferred_language';
+  const root=document.documentElement;
+  let currentLang=localStorage.getItem(storageKey)||'ar';
+  const originalTitle=document.title;
+  let applying=false;
+  const AR_EN={
+    'العربية':'Arabic','English':'English','د. أحمد سالم':'Dr. Ahmed Salem','عيادة د. أحمد سالم':'Dr. Ahmed Salem Clinic','لوحة تحكم العيادة — د. أحمد سالم':'Clinic Dashboard - Dr. Ahmed Salem',
+    'الرئيسية':'Home','المواعيد':'Appointments','احجز الآن':'Book Now','احجز الآن ←':'Book Now','الدفع':'Payment','تواصل معنا':'Contact Us','الإعدادات':'Settings','إعدادات النظام':'System Settings',
+    'نستقبل الحالات الآن':'Now accepting patients','صحتك هي أولويتنا':'Your Health Is Our Priority','نقدم رعاية طبية متميزة تعتمد على أحدث التقنيات وأفضل الكفاءات، في بيئة مريحة ومهنية تضع راحتك في المقام الأول.':'We provide outstanding medical care using modern technology and skilled professionals in a comfortable, professional environment built around your wellbeing.',
+    'احجز موعدك':'Book Your Appointment','المواعيد المتاحة':'Available Appointments','تقييم المرضى':'Patient Rating','رعاية هادئة، حجز ذكي':'Calm care, smart booking',
+    'مواعيد العيادة':'Clinic Hours','السبت – الخميس':'Saturday - Thursday','10:00 ص – 9:00 م':'10:00 AM - 9:00 PM','يتم التحقق...':'Checking...','العنوان':'Address','شارع الهرم، الجيزة':'Al Haram Street, Giza','بجوار مستشفى الجيزة الدولي':'Next to Giza International Hospital','الهاتف':'Phone','واتساب':'WhatsApp','الدور الحالي':'Current Turn','رقم 7':'Number 7','مواعيد متاحة اليوم':'Available slots today',
+    'خدماتنا الطبية':'Our Medical Services','رعاية شاملة تلبي احتياجاتك بأعلى معايير الجودة':'Comprehensive care that meets your needs with the highest quality standards','فحص عام':'General Checkup','استشارة متخصصة':'Specialist Consultation','تطعيمات ووقاية':'Vaccinations & Prevention','تحاليل ومتابعة':'Tests & Follow-up','فحص الأطفال':'Pediatric Checkup','متابعة دورية':'Regular Follow-up',
+    'تقييم شامل للحالة الصحية العامة يشمل الفحوصات الأساسية والتوجيه الطبي الدقيق.':'A complete assessment of your general health with essential checks and clear medical guidance.','جلسات تشخيصية دقيقة مع الدكتور أحمد لمناقشة الحالات المعقدة ووضع خطط علاجية.':'Detailed diagnostic sessions with Dr. Ahmed to discuss complex cases and treatment plans.','برامج تطعيم متكاملة للكبار والأطفال للوقاية من الأمراض الشائعة والموسمية.':'Complete vaccination programs for adults and children to prevent common and seasonal diseases.','متابعة دورية للحالات المزمنة مع تفسير التحاليل ووضع خطة متابعة شاملة.':'Regular chronic-care follow-up with test interpretation and a clear care plan.','رعاية متخصصة للأطفال من الولادة حتى المراهقة شاملة النمو والتطعيمات.':'Specialized care for children from birth through adolescence, including growth and vaccines.','مراجعة سريعة للحالات السابقة وإعادة تقييم الخطة العلاجية والوصفة الطبية.':'A quick review of previous cases and reassessment of the treatment plan and prescription.',
+    'احجز':'Book','مريض سعيد':'Happy Patients','نسبة الرضا':'Satisfaction Rate','سنوات خبرة':'Years Experience','فروع للعيادة':'Clinic Branches','جميع الحقوق محفوظة':'All rights reserved','الخصوصية':'Privacy','الشروط':'Terms','ساعات العمل':'Working Hours',
+    'جدول المواعيد المتاحة':'Available Appointment Schedule','اختر الموعد المناسب لك — يتم تحديثه مباشرة من العيادة':'Choose the right time for you - updated directly from the clinic','الأسبوع الحالي':'Current Week','حالة المواعيد:':'Slot Status:','متاح':'Available','محدود':'Limited','مكتمل':'Completed','مكتمل اليوم':'Completed Today','مكتملة اليوم':'Completed Today','الحجوزات':'Bookings','التقويم':'Calendar','إدارة المواعيد':'Manage Slots','الدفعات':'Payments','الرسائل':'Messages','لوحة التحكم':'Dashboard','طبيب رئيسي':'Lead Doctor','نظرة عامة':'Overview','الإدارة':'Management',
+    'حجز موعد جديد':'Book a New Appointment','أكمل الخطوات التالية لتأكيد موعدك مع د. أحمد سالم':'Complete the following steps to confirm your appointment with Dr. Ahmed Salem','ملخص الحجز':'Booking Summary','الخدمة':'Service','لم يتم الاختيار':'Not selected','الموعد':'Appointment','لم يتم التحديد':'Not selected','المريض':'Patient','الإجمالي':'Total','البيانات':'Details','التاريخ':'Date','الوقت':'Time','البيانات الشخصية':'Personal Details','الاسم الأول *':'First Name *','الاسم الأخير *':'Last Name *','رقم الهاتف *':'Phone Number *','البريد الإلكتروني':'Email','اختياري':'optional','مطلوب':'Required','رقم غير صحيح':'Invalid number','التالي: الخدمة':'Next: Service','التالي: التاريخ':'Next: Date','التالي: الوقت':'Next: Time','السابق':'Back','اختر الخدمة':'Choose Service','20-30 دقيقة':'20-30 minutes','40-45 دقيقة':'40-45 minutes','25-35 دقيقة':'25-35 minutes','20-25 دقيقة':'20-25 minutes','15-20 دقيقة':'15-20 minutes','اختر التاريخ':'Choose Date','اختر الوقت':'Choose Time','المواعيد المتاحة ليوم:':'Available slots for:','جاري تحميل المواعيد...':'Loading slots...','ملاحظات (اختياري)':'Notes (optional)','أي ملاحظة إضافية...':'Any extra note...','تأكيد الحجز':'Confirm Booking','تغيير':'Change',
+    'إتمام الدفع':'Complete Payment','اختر طريقة الدفع المناسبة لتأكيد حجزك':'Choose the payment method that suits you to confirm your booking','لا يوجد حجز!':'No booking found!','اذهب للحجز أولاً':'Go to booking first','السعر الكامل':'Full Price','المطلوب الآن (50%)':'Due Now (50%)','الباقي عند الزيارة':'Remaining at Visit','المطلوب الآن':'Due Now','طريقة السداد':'Payment Method','أولاً: نوع الدفع':'First: Payment Type','دفع كامل':'Full Payment','سداد المبلغ كاملاً':'Pay the full amount','نصف مقدم':'Half Deposit','الباقي عند الحضور':'Remaining on arrival','ثانياً: وسيلة الدفع':'Second: Payment Method','بطاقة بنكية':'Bank Card','محفظة إلكترونية':'E-wallet','إنستاباي':'Instapay','الاسم على البطاقة *':'Name on Card *','رقم البطاقة *':'Card Number *','تاريخ الانتهاء *':'Expiry Date *','تاريخ غير صحيح':'Invalid date','رقم الإيصال *':'Receipt Number *','رقم المرجع *':'Reference Number *','دفع آمن 100% — تشفير SSL':'100% secure payment - SSL encryption','أرسل المبلغ على رقم المحفظة:':'Send the amount to wallet number:','أرسل على حساب إنستاباي:':'Send to Instapay account:',
+    'نحن هنا للإجابة على استفساراتكم ومساعدتكم في حجز موعدكم القادم':'We are here to answer your questions and help you book your next appointment','أرسل لنا رسالة':'Send Us a Message','سنرد عليك في أقرب وقت خلال ساعات العمل':'We will reply as soon as possible during working hours','تم إرسال رسالتك! سنتواصل معك قريباً.':'Your message has been sent. We will contact you soon.','الاسم الكامل *':'Full Name *','الموضوع *':'Subject *','الرسالة *':'Message *','اسمك الكريم':'Your name','كيف يمكننا مساعدتك؟':'How can we help you?','اكتب رسالتك هنا...':'Write your message here...','إرسال الرسالة':'Send Message','شارع الهرم الرئيسي، الجيزة':'Main Al Haram Street, Giza',
+    'ربط الموقع بـ Google Sheet عبر رابط Apps Script':'Connect the website to Google Sheet through an Apps Script URL','ربط لوحة التحكم بـ Google Sheet عبر رابط Apps Script':'Connect the dashboard to Google Sheet through an Apps Script URL','أدخل كلمة المرور':'Enter password','كلمة المرور غير صحيحة':'Incorrect password','دخول':'Login','غير مربوط':'Not connected','رابط Google Apps Script Web App':'Google Apps Script Web App URL','اختبار الاتصال':'Test Connection','حفظ وتفعيل':'Save & Activate','حفظ وتفعيل الربط':'Save & Activate Connection','بعد الحفظ تُحفظ المواعيد والرسائل تلقائياً في Google Sheet':'After saving, appointments and messages are stored automatically in Google Sheet','بعد الحفظ تُزامَن جميع البيانات من Google Sheet تلقائياً':'After saving, all data syncs automatically from Google Sheet','تم تأكيد حجزك! 🎉':'Your booking is confirmed!','سيتواصل معك فريقنا لتأكيد الموعد. احتفظ برقم حجزك:':'Our team will contact you to confirm the appointment. Keep your booking code:','سيصلك تأكيد على رقم هاتفك':'A confirmation will be sent to your phone number','عظيم، شكراً!':'Great, thank you!',
+    'مزامنة':'Sync','مفتوح الآن':'Open Now','مغلق الآن':'Closed Now','حجوزات اليوم':'Today\'s Bookings','مواعيد اليوم':'Today\'s Appointments','قيد الانتظار':'Pending','تحتاج تأكيد':'Needs Confirmation','غير مدفوع':'Unpaid','في انتظار الدفع':'Awaiting Payment','زيارات منتهية':'Completed Visits','عرض الكل':'View All','آخر الحجوزات':'Recent Bookings','الكود':'Code','الحالة':'Status','إجراءات':'Actions','جميع الحجوزات':'All Bookings','ابحث باسم أو كود...':'Search by name or code...','كل الحالات':'All Statuses','كل الدفعات':'All Payments','مؤكد':'Confirmed','مؤكد - في انتظار الدفع':'Confirmed - Awaiting Payment','ملغى':'Cancelled','مدفوع بالكامل':'Paid in Full','مدفوع نصف':'Half Paid','مدفوع':'Paid','ملاحظات':'Notes',
+    'اليوم':'Today','اختر يوماً':'Choose a Day','انقر على أي يوم في التقويم':'Click any day in the calendar','اختر يوماً لعرض حجوزاته':'Choose a day to view its bookings','أحد':'Sun','اثنين':'Mon','ثلاثاء':'Tue','أربعاء':'Wed','خميس':'Thu','جمعة':'Fri','سبت':'Sat',
+    'إضافة موعد جديد':'Add New Slot','التاريخ المحدد':'Specific Date','الوقت (من)':'Time From','الوقت (إلى)':'Time To','أقصى عدد مرضى في هذا الوقت':'Maximum patients at this time','نوع الخدمة':'Service Type','جميع الخدمات':'All Services','إضافة الموعد':'Add Slot','المواعيد المضافة':'Added Slots','الكل':'All','القادمة':'Upcoming','تعديل موعد حجز موجود':'Edit Existing Booking Slot','كود الحجز':'Booking Code','التاريخ الجديد':'New Date','الوقت الجديد':'New Time','اختر الوقت':'Choose Time','حفظ':'Save','إجمالي الإيرادات':'Total Revenue','مستحقات معلقة':'Pending Dues','مدفوع اليوم':'Paid Today','سجل الدفعات':'Payment Log','المدفوع':'Paid Amount','الباقي':'Remaining','حالة الدفع':'Payment Status','إجراء':'Action','غير مقروء':'Unread','مقروء':'Read','لا توجد رسائل بعد':'No messages yet','تأكيد':'Confirm','هل أنت متأكد؟':'Are you sure?','إلغاء':'Cancel','جاري المزامنة...':'Syncing...',
+    'الهاتف':'Phone','البريد الإلكتروني':'Email','التاريخ والوقت':'Date & Time','المبلغ المدفوع':'Paid Amount','نوع الدفع':'Payment Type','وقت التسجيل':'Submitted At','ملاحظات المريض':'Patient Notes','اختر وقت البدء':'Choose start time','اختر وقت الانتهاء':'Choose end time','مريض':'patient','مرضى':'patients',
+    'الأحد':'Sunday','الاثنين':'Monday','الثلاثاء':'Tuesday','الأربعاء':'Wednesday','الخميس':'Thursday','الجمعة':'Friday','السبت':'Saturday','يناير':'January','فبراير':'February','مارس':'March','أبريل':'April','مايو':'May','يونيو':'June','يوليو':'July','أغسطس':'August','سبتمبر':'September','أكتوبر':'October','نوفمبر':'November','ديسمبر':'December'
+  };
+  // ── PERFORMANCE: pre-build sorted phrases array once ──
+  const PHRASES=Object.keys(AR_EN).sort((a,b)=>b.length-a.length);
+  const ATTRS=['placeholder','title','aria-label'];
+  // Cache compiled regexes to avoid rebuilding on every text node
+  const RE_CACHE={};
+  function getRe(ar){ return RE_CACHE[ar]||(RE_CACHE[ar]=new RegExp(ar.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g')); }
+
+  function translateText(original){
+    if(!original||!original.trim()) return original;
+    const trimmed=original.trim();
+    if(AR_EN[trimmed]) return original.replace(trimmed, AR_EN[trimmed]);
+    let out=trimmed;
+    for(let i=0;i<PHRASES.length;i++){
+      if(out.includes(PHRASES[i])) out=out.replace(getRe(PHRASES[i]),AR_EN[PHRASES[i]]);
+    }
+    out=out.replace(/ج\.م/g,'EGP').replace(/-- اختر/g,'-- Choose');
+    const s=(original.match(/^\s*/)||[''])[0], e=(original.match(/\s*$/)||[''])[0];
+    return s+out+e;
+  }
+
+  // Store original Arabic text/attrs on a node (only once)
+  function storeNode(n){
+    if(n.__arStored) return;
+    n.__arStored=true;
+    n.__arText=n.nodeValue;
+  }
+  function storeEl(el){
+    if(el.__arStored) return;
+    el.__arStored=true;
+    ATTRS.forEach(a=>{ if(el.hasAttribute(a)) el['__ar_'+a]=el.getAttribute(a); });
+  }
+
+  // Walk a subtree, storing originals and applying current lang
+  function walk(rootNode){
+    const isEn=currentLang==='en';
+    // Text nodes
+    const walker=document.createTreeWalker(rootNode,NodeFilter.SHOW_TEXT,{
+      acceptNode(n){
+        const p=n.parentElement;
+        return p&&!p.closest('script,style,.notranslate')&&n.nodeValue.trim()
+          ?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes=[];
+    while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n=>{
+      storeNode(n);
+      n.nodeValue=isEn?translateText(n.__arText):n.__arText;
+    });
+    // Elements (attributes)
+    const els=(rootNode.nodeType===1?[rootNode]:[]).concat(
+      rootNode.querySelectorAll?Array.from(rootNode.querySelectorAll('*')):[]
+    );
+    els.forEach(el=>{
+      if(el.closest('script,style,.notranslate')) return;
+      storeEl(el);
+      ATTRS.forEach(a=>{
+        const orig=el['__ar_'+a];
+        if(orig) el.setAttribute(a, isEn?translateText(orig):orig);
+      });
+    });
+  }
+
+  function updateShell(lang){
+    const isEn=lang==='en';
+    root.lang=isEn?'en':'ar'; root.dir=isEn?'ltr':'rtl';
+    root.classList.toggle('lang-en',isEn); root.classList.toggle('lang-ar',!isEn);
+    document.body.style.direction=isEn?'ltr':'rtl';
+    document.querySelectorAll('[data-clinic-lang]').forEach(btn=>
+      btn.classList.toggle('active',btn.dataset.clinicLang===lang));
+    document.title=isEn?translateText(originalTitle):originalTitle;
+  }
+
+  function applyLanguage(lang){
+    currentLang=lang; localStorage.setItem(storageKey,lang);
+    updateShell(lang); applying=true; walk(document.body); applying=false;
+  }
+
+  document.addEventListener('click',function(e){
+    const btn=e.target.closest('[data-clinic-lang]');
+    if(btn) applyLanguage(btn.dataset.clinicLang);
+  });
+
+  // ── LIGHTWEIGHT MUTATION OBSERVER ──
+  // Batches mutations with requestAnimationFrame — fires at most once per frame.
+  // Only watches for childList (new nodes). Does NOT watch characterData
+  // (dynamic text from JS always runs through renderXxx functions which
+  //  produce fresh innerHTML — the added-nodes path handles them).
+  let pendingNodes=[];
+  let rafId=null;
+  function flushPending(){
+    rafId=null;
+    if(!pendingNodes.length||applying||currentLang!=='en'){pendingNodes=[];return;}
+    applying=true;
+    // De-duplicate: only walk top-most ancestors to avoid redundant work
+    const roots=[];
+    outer: for(let i=0;i<pendingNodes.length;i++){
+      const n=pendingNodes[i];
+      for(let j=0;j<roots.length;j++) if(roots[j].contains(n)) continue outer;
+      roots.push(n);
+    }
+    roots.forEach(n=>walk(n));
+    pendingNodes=[];
+    applying=false;
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    applyLanguage(currentLang);
+    new MutationObserver(function(muts){
+      if(applying||currentLang!=='en') return;
+      muts.forEach(m=>{
+        m.addedNodes.forEach(n=>{
+          if(n.nodeType===1||n.nodeType===3) pendingNodes.push(n);
+        });
+      });
+      if(pendingNodes.length&&!rafId) rafId=requestAnimationFrame(flushPending);
+    }).observe(document.body,{childList:true,subtree:true});
+    // characterData not observed — eliminates the most expensive hot path
+  });
+})();
+</script>
+</body>
+</html>
+
+
+
